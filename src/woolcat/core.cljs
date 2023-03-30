@@ -5,6 +5,7 @@
    [woolcat.events :as events]
    [woolcat.views :as views]
    [woolcat.config :as config]
+   [woolcat.styles] ;; Needed for global styles
    ))
 
 

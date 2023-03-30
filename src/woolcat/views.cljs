@@ -5,8 +5,8 @@
    ))
 
 (defn main-panel []
-  (let [name (re-frame/subscribe [::subs/name])]
-    [:div
-     [:h1
-      "Hello from " @name]
-     ]))
+  [:div.center
+   [:div.logo-font "WoolCAT"]
+   [:div [:img {:src "logo-small.png"}]]
+   [:div "Architect made"]
+   ])
