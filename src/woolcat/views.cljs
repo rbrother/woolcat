@@ -4,9 +4,13 @@
    [woolcat.subs :as subs]
    ))
 
+(def img-base "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/")
+
 (defn main-panel []
-  [:div.center
+  [:div.main
    [:div.logo-font "WoolCAT"]
    [:div [:img {:src "logo-small.png"}]]
-   [:div "Architect made"]
+   [:div.script.large "Architect made"]
+   [:div [:img {:src (str img-base "dino1.jpg")
+                :width "500px"}]]
    ])
