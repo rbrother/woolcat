@@ -10,12 +10,13 @@
 (def default-font
   {:color :black, :background-color :white
    :font-family "Roboto"
-   :font-size medium-font})
+   :font-size medium-font
+   :font-weight "300"})
 
 (defglobal
   defaults
-  [:body (assoc default-font :user-select "none" :padding "16px" :margin "0")]
-  [:div.main-title { :font-size "50px" :margin-top "20px" }]
+  [:body (assoc default-font :user-select "none" :padding "16px")]
+  [:div.main-title { :font-size "50px" }]
   [:div.chinese-name {:font-family "Noto Serif SC", :font-size "30px"}]
   [:.logo-font {:font-family "fredericka the great" :font-size "90px"}]
   [:.script {:font-family "badscript"}]
@@ -31,12 +32,12 @@
                :background "#f33" :color "black" :font-weight "bold"
                :padding "8px" :align-items "center"}]
   [:div.product-table
-   {:display "grid", :width "90%"
-    :margin-right "auto"
+   {:display "grid"
+    :margin "auto"
     :margin-top "160px"
-    :grid-template-columns "auto auto auto auto 1fr"
-    :gap "20px"}]
-  [:div.crop-container {:width "300px" :height "300px" :overflow "hidden" :position "relative"}]
+    :grid-template-columns "1fr auto auto auto auto auto 1fr"
+    :gap "40px"}]
+  [:div.crop-container {:width "200px" :height "200px" :overflow "hidden" :position "relative"}]
   [:img.cropped-image {:width "100%" :height "100%" :object-fit "cover" }]
   )
 

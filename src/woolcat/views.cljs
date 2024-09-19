@@ -10,7 +10,8 @@
    [:div.main-title "Chan Ann Chuang"]
    [:div.chinese-name "莊誠安"]
    (into
-     [:div.product-table]
+     [:div.product-table
+      [:div]]
      (for [{:keys [photo object-position]} categories]
        [:div.crop-container
         [:img.cropped-image {:src photo
