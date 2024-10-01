@@ -12,7 +12,9 @@
    (into
      [:div.product-table
       [:div]]
-     (for [{:keys [photo object-position]} categories]
-       [:div.crop-container
-        [:img.cropped-image {:src photo
-                             :style { :object-position (or object-position "center")}}]]))])
+     (for [{:keys [name photo]} categories]
+       [:div
+        [:div.crop-container
+         [:img.cropped-image {:src photo }]]
+        [:div.margin-top [:span.large {:style {:position "relative" :top "2px"}} "⇝ "] name]
+        ]))])

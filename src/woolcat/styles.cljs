@@ -25,6 +25,7 @@
   [:.absolute {:position "absolute"}]
   [:.pad {:padding "8px"}]
   [:.center {:text-align "center"}]
+  [:.margin-top {:margin-top "8px"}]
   [:.margin {:margin "8px"}]
   [:.bold {:font-weight "bold"}]
   [:div.flex {:display "flex" :align-items "center"}]

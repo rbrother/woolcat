@@ -7,18 +7,16 @@
 ;; https://www.dropbox.com/scl/fo/k92lhu64t31v0yhg99kli/ALTQYZFlBq8hA8jbh5mciXM?rlkey=u9p2d55n1hm3rvxemtzkx36cc&e=1&dl=0
 
 (def categories
-  [{:name "Feltwool"
-    :object-position "0 80%"
-    :photo "https://uc4bb9cbcda8676edaa5fc18cac7.previews.dropboxusercontent.com/p/thumb/ACZC2BLzmRIHxbRqkyIkK4qEwQECqoCyV3I8axjdL1HLjruIyetRatNk6hqPDYFHxnwpPXVzzxkjtXhPAyyL86HPOi91Nrpd16Fzdj0oEneux6W6yvH3BF-IBw6zK4s2gggDAk7KIgM-Aj9GDAOisjQxGVljHYP69Qt_WDIxRi3MiCw4-Wo5cqDO3XBD9i4Tc5kdps3MTd5uaUxjzedxbNn_4j29fGpCGptJv48_Jh6yd4w2GTePzdbem6NNWWyzR5ebhg6QLwgHOQq77RfM8eWsn9JQy8HF_T6o6dTSHVoOTtcc-ESJLK37nhjZsyutPwfx5Ab4WUcBEJroMcbMikWpsB6kk6jR9AtsLY3An3p6WA/p.jpeg"}
-   {:name "Crochet"
-    :object-position "0 80%"
-    :photo "https://ucd39fc78916300688a00eabdf90.previews.dropboxusercontent.com/p/thumb/ACa9YJFkjteYc9pLAMqFnEl-mEN0OFjZXBJlPcAwp2ha-99LiAMf-Cv6Qq3zBlDPeykeybEcJIcXTqERobNCwZo5R1_IGzWk-Qh8VnHX0uP6xuNZkJotKjJLpoTbzdE3n9rXPeoX6-dI6-ugz-bCZqJWjXerJ3FLFraKwo0W5VcMHW-KMtta_KK5p5WkYqEHAwJgFfZnFx2VLCgnmALdUwjQxmFjvXKdKj8DThpeQOLmNY61EVF6_hWBBgjcCtbIxgBESioaQOOm1s4dbPET-7t5iK_-EhDV5qxnwu5rq27Gp7P70l6arp-k92leL21j0MOb_G-VG04rPjfGyQEEEgxGlSrFnFkE3QTkEOEa8izeFQ/p.jpeg"}
+  [{:name "Fiber"
+    :photo "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/fiber.jpg"}
+   {:name "Yarn"
+    :photo "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/yarn.jpg"}
    {:name "Fabric"
-    :photo "https://uc5cf027783204d2973cbbcdae87.previews.dropboxusercontent.com/p/thumb/ACY70QnMz_zAZMh2UH71OMJrP9GGeGkfs0QnIFqf3Y0_vNNNrl5yQgoeFAT2PD5isgyMqOkeRRR3KF_FXcbKurwkZJzg70coBqFKxKQlmZwgyKBnJYFXQ-mtjrg7QGNoIoYxlK0N-Q8vMuMqLKd6vUoNcPC1S9mGZoOkR_Xyl3M5hN5E9FC-YkREmP4wxOEMDKtyMqi9hJzW2YJrFA-gNFMExxdwBu1jtlnf34ra0IvLUxJeBPe-qNxc2fwGpGQfRtZI8NWgWTWrSdQ4aUFpkYRpv2PqLyZMg6bSuRpBirMT_ycqLfgBX0Dcv8yNW7H2DnOukTC3LCGsGBZthNxAKylqjs9ZaMNz3Qv_LGYCwWOyeg/p.jpeg"}
-   {:name "Fur"
-    :photo "https://ucab26b5d1a1e5b1bd36e479b985.previews.dropboxusercontent.com/p/thumb/ACZ7q-vYZgoWd9X-mbRtOTNnl4szy88--XAVqZL1UybzsbWdTK-w8vqzgOO043lM6woyB1MS-aSD6qyfFhfkiXVBtNKlVeqYwgFJZzMtx6Fs5UI34ndwAktnhrnCcUzRczNtWAs6G_WckfTkAZ_Ptie3Sv2aY3fgJC2qEJERNT7PU-qY6Rbd1U_R4RDF14SI7_VcDZlZEC2jGo_44yXLJe0SrZGzq-x6PTwrTE2UMziA5W4kplc8J3rP5va5yewMMJ8cxgwp6socC5FYcUTqfzrUra34BgiAfBwk7UHwV0FJcfY5dY005SVo027yFli51CVLK3bADsprOixZfvOgsvg-wbF09X_uSH1km4aaQv5eqQ/p.jpeg"}
-   {:name "Origami"
-    :photo "https://uc4db5308a117ff6c5494b3cf99f.previews.dropboxusercontent.com/p/thumb/ACZouytiKApWw-TymXFzzf33JmMWT-GehsVgVENy0PC395MTonBzEnT1LP7LmqmKoj1V4FZ9wJsqFNaajzKIojxkZJyIiudo-ZOFHid2kZcUNKE3TOsRyGjYh4c5JdweYiAxd5_-nEJPpdWDezNUNG4FBXrCnA7SrKiUmua4BSGFqmvllOEVLcIVhQEpsBM3lVi41OB484cgCgQK5mtpnYIffOKjmy-_55y5kQqmulhI2G0wqvba_bJijxPMd5l3mMJyM4QTtUB98veMs_sdC7Cm0D6uzI2tHgDdrj2q-RU4vjKUX7sVHTRpQF91hk0ts-7D7BCkw92YqXnoMB4w-xdotddYoG-4VFe6G4kzX0MNwg/p.jpeg"}
+    :photo "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/fabric.jpg"}
+   {:name "Skin"
+    :photo "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/skin.jpg"}
+   {:name "Paper"
+    :photo "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/paper.jpg"}
    ])
 
 (def product-data
