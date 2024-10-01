@@ -11,13 +11,14 @@
   {:color :black, :background-color :white
    :font-family "Roboto"
    :font-size medium-font
-   :font-weight "300"})
+   :font-weight "400"})
 
 (defglobal
   defaults
   [:body (assoc default-font :user-select "none" :padding "16px")]
-  [:div.main-title { :font-size "50px" }]
-  [:div.chinese-name {:font-family "Noto Serif SC", :font-size "30px"}]
+  [:div.main-title { :font-size "25px" }]
+  [:div.chinese-name {:font-family "Noto Sans HK", :font-size "20px",
+                      :font-weight 500}]
   [:.logo-font {:font-family "fredericka the great" :font-size "90px"}]
   [:.script {:font-family "badscript"}]
   [:.large {:font-size large-font}]
