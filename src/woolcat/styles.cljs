@@ -39,7 +39,7 @@
   [:div.product-table
    {:display "grid"
     :margin-top "120px"
-    :grid-template-columns "auto auto auto auto auto"
+    :grid-template-columns "repeat(5, 200px)"
     :gap "40px"}]
   [:div.technique-table
    {:display "grid"

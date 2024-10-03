@@ -23,7 +23,7 @@
 (def techniques
   ["Felt" "Knit" "Weave" "Sew" "Fold"])
 
-(def product-data
+(def products
   [{:name "Earth and Moon bags"
     :id "bag-earth-moon"
     :dimension "Fiber"
