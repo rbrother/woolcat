@@ -8,7 +8,7 @@
 
 (def img-base "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/")
 
-(def categories
+(def dimensions
   [{:name "Fiber"
     :photo (str img-base "fiber.jpg")}
    {:name "Yarn"
@@ -24,28 +24,14 @@
   ["Felt" "Knit" "Weave" "Sew" "Fold"])
 
 (def product-data
-  [{:name "Red and purple purse"
-    :category "Feltwool"
-    :photo ""}
-   {:name "Earth and white purse"
-    :category "Feltwool"
-    :photo ""}
-   {:name "Blue-white and white purse"
-    :category "Feltwool"
-    :photo ""}
-   {:name "Cyan planet purse 1"
-    :category "Feltwool"
-    :photo ""}
-   {:name "Cyan planet purse 2"
-    :category "Feltwool"
-    :photo ""}
-   {:name "Cyan planet purse 3"
-    :category "Feltwool"
-    :photo ""}
-   {:name "Blue-white planet purse"
-    :category "Feltwool"
-    :photo ""}
-   {:name "Chicken leg"
-    :category "Crochet"
-    :photo ""}
+  [{:name "Earth and Moon bags"
+    :id "bag-earth-moon"
+    :dimension "Fiber"
+    :technique "Felt"
+    :detail-pics 4}
+   {:name "Pink and purple bags"
+    :id "bag-pink-purple"
+    :dimension "Fiber"
+    :technique "Felt"
+    :detail-pics 2}
    ])

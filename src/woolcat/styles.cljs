@@ -12,7 +12,7 @@
 
 (defglobal
   defaults
-  ;; [:div {:border "dotted 1px #888"}] ;; For debugging layouts
+  ;;[:div {:border "dotted 1px #888"}] ;; For debugging layouts
   [:body (assoc default-font :user-select "none" :padding "16px")]
   [:div.main-title {:font-size "25px"}]
   [:div.chinese-name {:font-family "Noto Sans HK", :font-size "20px",
@@ -41,6 +41,10 @@
     :margin-top "120px"
     :grid-template-columns "auto auto auto auto auto"
     :gap "40px"}]
+  [:div.technique-table
+   {:display "grid"
+    :grid-template-columns "repeat(5, 120px)"
+    :gap "20px"}]
   [:div.crop-container {:width "200px" :height "200px" :overflow "hidden" :position "relative"}]
   [:img.cropped-image {:width "100%" :height "100%" :object-fit "cover"}]
   [:div.grid {:display "grid"}]
