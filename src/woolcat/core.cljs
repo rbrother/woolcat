@@ -2,12 +2,11 @@
   (:require
    [reagent.dom :as rdom]
    [re-frame.core :as re-frame]
-   [woolcat.events :as events]
+   [woolcat.db :as db]
    [woolcat.views :as views]
    [woolcat.config :as config]
    [woolcat.styles] ;; Needed for global styles
    ))
-
 
 (defn dev-setup []
   (when config/debug?
@@ -20,6 +19,6 @@
     (rdom/render [views/main-panel] root-el)))
 
 (defn init []
-  (re-frame/dispatch-sync [::events/initialize-db])
+  (re-frame/dispatch-sync [::db/initialize-db])
   (dev-setup)
   (mount-root))

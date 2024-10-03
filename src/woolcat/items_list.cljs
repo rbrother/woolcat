@@ -28,6 +28,4 @@
           [:div.link {:on-click #(rf/dispatch [::select-dimension name])}
            [:div.crop-container
             [:img.cropped-image {:src photo}]]
-           [:div.margin-top name]])))
-    )
-  )
+           [:div.margin-top name]])))))

@@ -1,4 +1,6 @@
-(ns woolcat.db)
+(ns woolcat.db
+  (:require [re-frame.core :as rf]
+            [re-frame.core :as rf]))
 
 (def default-db
   {})
@@ -35,3 +37,6 @@
     :technique "Felt"
     :detail-pics 2}
    ])
+
+(rf/reg-event-db ::initialize-db
+  (fn [_] {}))
