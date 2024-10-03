@@ -20,9 +20,9 @@
 ;; Views
 
 (defn filter-label [{:keys [dimension technique material]}]
-  (or dimension technique material))
+  [:div (or dimension technique material)])
 
-(defn dimension-filters []
+(defn dimension-filters-with-pics []
   (into
     [:div.product-table.col-span-2]
     (for [{:keys [name photo]} dimensions]
@@ -31,11 +31,29 @@
         [:img.cropped-image {:src photo}]]
        [:div.margin-top wiggly-arrow name]])))
 
+(defn dimension-filters []
+  (into
+    [:div.product-table.col-span-2]
+    (for [{:keys [name]} dimensions]
+      [:div.link {:on-click #(rf/dispatch [::select-dimension name])}
+       [:div.margin-top wiggly-arrow name]])))
+
 (defn technique-filters []
   (into
     [:div.technique-table.col-span-2]
     (for [technique techniques]
       [:div wiggly-arrow technique])))
+
+(defn material-filters []
+  [:div "** material-filters not implemented yet *"])
+
+(defn current-filter []
+  (let [{:keys [dimension technique material]} @(rf/subscribe [::filter])]
+    (cond
+      dimension [dimension-filters]
+      technique [technique-filters]
+      material [material-filters]
+      :else nil)))
 
 ;; Subs
 

@@ -13,7 +13,8 @@
      [:div.justify-end "Info"]
      (if-not filter
        [:<>
-        [filters/dimension-filters]
+        [:div.col-span-2] ;; spacer
+        [filters/dimension-filters-with-pics]
         [filters/technique-filters]]
        [items-list/view filter])
      [:div]
