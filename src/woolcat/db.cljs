@@ -1,6 +1,5 @@
 (ns woolcat.db
-  (:require [re-frame.core :as rf]
-            [re-frame.core :as rf]))
+  (:require [re-frame.core :as rf]))
 
 (def default-db
   {})
@@ -23,19 +22,22 @@
     :photo (str img-base "paper.jpg")}])
 
 (def techniques
-  ["Felt" "Knit" "Weave" "Sew" "Fold"])
+  ["Felt" "Knit" "Crochet" "Weave" "Sew" "Origami"])
 
 (def products
-  [{:name "Earth and Moon bags"
-    :id "bag-earth-moon"
-    :dimension "Fiber"
-    :technique "Felt"
-    :detail-pics 4}
-   {:name "Pink and purple bags"
-    :id "bag-pink-purple"
-    :dimension "Fiber"
-    :technique "Felt"
-    :detail-pics 2}
+  [{:name "Planet chain-bag", :id "bag-earth-moon", :dimension "Fiber", :technique "Felt", :detail-pics 4}
+   {:name "Pink chain-bag", :id "bag-pink-purple", :dimension "Fiber", :technique "Felt", :detail-pics 2}
+   {:name "Qing", :id "qing-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 2}
+   {:name "Song", :id "song-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 1}
+   {:name "Rockstar", :id "rockstar-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
+   {:name "ZhuGe L", :id "zhuge-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
+   {:name "Female", :id "pink-glove", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
+   {:name "Male", :id "gray-glove", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
+   {:name "Surgeon", :id "surgeon-glove", :dimension "Yarn", :technique "Knit", :detail-pics 0}
+   {:name "Baby shoe", :id "baby-shoe", :dimension "Yarn", :technique "Knit", :detail-pics 0}
+   {:name "Corona virus", :id "corona-virus", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
+   {:name "Rose", :id "rose", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
+   {:name "Panda bamboo tapestry", :id "panda-bamboo-tapestry", :dimension "Yarn", :technique "Weave", :detail-pics 0}
    ])
 
 (rf/reg-event-db ::initialize-db
