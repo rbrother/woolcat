@@ -12,9 +12,9 @@
 
 (defglobal
   defaults
-  ;;[:div {:border "dotted 1px #888"}] ;; For debugging layouts
+  ;; [:div {:border "dotted 1px #888"}] ;; For debugging layouts
   [:body (assoc default-font :user-select "none" :padding "16px")]
-  [:div.main-title {:font-size "25px"}]
+  [:.main-title {:font-size "25px"}]
   [:div.chinese-name {:font-family "Noto Sans HK", :font-size "20px",
                       :font-weight 500}]
   [:.logo-font {:font-family "fredericka the great" :font-size "90px"}]
@@ -46,9 +46,11 @@
     :gap "20px"}]
   [:div.crop-container {:width "200px" :height "200px" :overflow "hidden" :position "relative"}]
   [:img.cropped-image {:width "100%" :height "100%" :object-fit "cover"}]
+  [:img.large-photo {:width "50%" }]
   [:div.grid {:display "grid"}]
   [:div.col-span-2 {:grid-column "span 2"}]
   [:div.justify-end {:justify-self "end"}]
+  [:div.justify-center {:justify-self "center", :text-align "center"}]
   [:div.link {:cursor "pointer"}]
   )
 
