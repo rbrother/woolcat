@@ -2,9 +2,11 @@
   (:require
    [reagent.dom :as rdom]
    [re-frame.core :as re-frame]
+   [re-frame.db]
    [woolcat.db :as db]
    [woolcat.views :as views]
    [woolcat.config :as config]
+   [reagent-dev-tools.core :as dev-tools]
    [secretary.core :as secretary :refer [defroute]]
    [accountant.core :as accountant]
    [woolcat.styles] ;; Needed for global styles
@@ -12,7 +14,9 @@
 
 (defn dev-setup []
   (when config/debug?
-    (println "dev mode")))
+    (do
+      (println "dev mode")
+      (dev-tools/start! {:state-atom re-frame.db/app-db}))))
 
 (defn ^:dev/after-load mount-root []
   (re-frame/clear-subscription-cache!)
