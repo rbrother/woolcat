@@ -28,6 +28,7 @@
   [:.margin-right-32 {:margin-right "32px"}]
   [:.margin {:margin "8px"}]
   [:.bold {:font-weight "bold"}]
+  [:.gray {:color "#AAA"}]
   [:div.flex {:display "flex" :align-items "center"}]
   [:div.error {:display "grid" :grid-template-columns "1fr auto"
                :background "#f33" :color "black" :font-weight "bold"
