@@ -21,8 +21,8 @@
     :photo (str img-base "fiber.jpg")}
    {:name "Yarn"
     :photo (str img-base "yarn.jpg")}
-   {:name "Fabric"
-    :photo (str img-base "fabric.jpg")}
+   {:name "Textile"
+    :photo (str img-base "textile.jpg")}
    {:name "Skin"
     :photo (str img-base "skin.jpg")}
    {:name "Paper"
@@ -30,6 +30,9 @@
 
 (def techniques
   ["Felt" "Knit" "Crochet" "Weave" "Sew" "Origami"])
+
+(def materials
+  ["Cotton" "Wool" "Leather" "Paper" "Metal"])
 
 (def products-raw
   [{:name "Planet chain-bag", :id "bag-earth-moon", :dimension "Fiber", :technique "Felt", :detail-pics 4}
@@ -45,6 +48,11 @@
    {:name "Corona virus", :id "corona-virus", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
    {:name "Rose", :id "rose", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
    {:name "Panda bamboo tapestry", :id "panda-bamboo-tapestry", :dimension "Yarn", :technique "Weave", :detail-pics 0}
+   {:name "Autumn dress" :id "autumn-dress", :dimension "Textile", :technique "Sew", :detail-pics 2}
+   {:name "Bear coat" :id "bear-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
+   {:name "Cheonsam" :id "cheonsam", :dimension "Textile", :technique "Sew", :detail-pics 2}
+   {:name "Green coat" :id "green-coat", :dimension "Textile", :technique "Sew", :detail-pics 2}
+   {:name "Joy dress" :id "joy-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
    ])
 
 (def products (mapv amend-product products-raw))

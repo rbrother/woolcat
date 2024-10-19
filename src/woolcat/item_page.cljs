@@ -10,7 +10,7 @@
     (into [:<>
            [:div.col-span-2
             [:p.main-title name]
-            [:div "Material: " (str/join ", " material)]]]
+            (when material [:div "Material: " (str/join ", " material)])]]
           (for [photo all-photos]
             [:div.col-span-2.justify-center
              [:img.large-photo {:src photo}]]))))
