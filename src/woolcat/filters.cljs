@@ -42,7 +42,8 @@
   (into
     [:div.technique-table.col-span-2]
     (for [technique techniques]
-      [:div wiggly-arrow technique])))
+      [:div.link {:on-click #(rf/dispatch [::select-technique technique])}
+       wiggly-arrow technique])))
 
 (defn material-filters []
   [:div "** material-filters not implemented yet *"])
@@ -65,3 +66,7 @@
 (rf/reg-event-db ::select-dimension
   (fn [db [_ name]]
     (assoc-in db [:filter :dimension] name)))
+
+(rf/reg-event-db ::select-technique
+  (fn [db [_ name]]
+    (assoc-in db [:filter :technique] name)))

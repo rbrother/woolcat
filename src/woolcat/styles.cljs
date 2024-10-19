@@ -43,7 +43,7 @@
     :gap "40px"}]
   [:div.technique-table
    {:display "grid"
-    :grid-template-columns "repeat(5, 120px)"
+    :grid-template-columns "repeat(6, 120px)"
     :gap "20px"}]
   [:div.crop-container {:width "200px" :height "200px" :overflow "hidden" :position "relative"}]
   [:img.cropped-image {:width "100%" :height "100%" :object-fit "cover"}]
