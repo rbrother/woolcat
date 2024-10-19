@@ -32,22 +32,35 @@
   ["Felt" "Knit" "Crochet" "Weave" "Sew" "Origami"])
 
 (def materials
-  ["Cotton" "Wool" "Leather" "Paper" "Metal"])
+  ["Cotton" "Wool" "Leather" "Paper" "Metal" "Wood"])
 
 (def products-raw
-  [{:name "Planet chain-bag", :id "bag-earth-moon", :dimension "Fiber", :technique "Felt", :detail-pics 4}
-   {:name "Pink chain-bag", :id "bag-pink-purple", :dimension "Fiber", :technique "Felt", :detail-pics 2}
-   {:name "Qing", :id "qing-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 2}
-   {:name "Song", :id "song-hat", :dimension "Yarn", :technique "Crochet", :material #{"Wool" "Metal"} :detail-pics 1}
-   {:name "Rockstar", :id "rockstar-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
-   {:name "ZhuGe L", :id "zhuge-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
-   {:name "Female", :id "pink-glove", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
-   {:name "Male", :id "gray-glove", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
-   {:name "Surgeon", :id "surgeon-glove", :dimension "Yarn", :technique "Knit", :detail-pics 0}
-   {:name "Baby shoe", :id "baby-shoe", :dimension "Yarn", :technique "Knit", :detail-pics 0}
-   {:name "Corona virus", :id "corona-virus", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
-   {:name "Rose", :id "rose", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
-   {:name "Panda bamboo tapestry", :id "panda-bamboo-tapestry", :dimension #{"Yarn" "Fiber"}, :technique "Weave", :detail-pics 0}
+  [{:name "Planet chain-bag", :id "bag-earth-moon", :dimension "Fiber", :technique "Felt",
+    :material #{"Wool" "Metal"}, :detail-pics 4}
+   {:name "Pink chain-bag", :id "bag-pink-purple", :dimension "Fiber", :technique "Felt",
+    :material #{"Wool" "Metal"}, :detail-pics 2}
+   {:name "Qing", :id "qing-hat", :dimension "Yarn", :technique "Crochet",
+    :material "Wool", :detail-pics 2}
+   {:name "Song", :id "song-hat", :dimension "Yarn", :technique "Crochet",
+    :material #{"Cotton" "Metal"} :detail-pics 1}
+   {:name "Rockstar", :id "rockstar-hat", :dimension "Yarn", :technique "Crochet",
+    :material #{"Cotton" "Wool"}, :detail-pics 0}
+   {:name "ZhuGe L", :id "zhuge-hat", :dimension "Yarn", :technique "Crochet",
+    :material "Wool", :detail-pics 0}
+   {:name "Female", :id "pink-glove", :dimension "Yarn", :technique "Crochet",
+    :material "Wool", :detail-pics 0}
+   {:name "Male", :id "gray-glove", :dimension "Yarn", :technique "Crochet",
+    :material "Wool", :detail-pics 0}
+   {:name "Surgeon", :id "surgeon-glove", :dimension "Yarn", :technique "Knit",
+    :material "Wool", :detail-pics 0}
+   {:name "Baby shoe", :id "baby-shoe", :dimension "Yarn", :technique "Knit",
+    :material "Wool", :detail-pics 0}
+   {:name "Corona virus", :id "corona-virus", :dimension "Yarn", :technique "Crochet",
+    :material "Wool", :detail-pics 0}
+   {:name "Rose", :id "rose", :dimension "Yarn", :technique "Crochet",
+    :material #{"Cotton" "Wool" "Metal"}, :detail-pics 0}
+   {:name "Panda bamboo tapestry", :id "panda-bamboo-tapestry", :dimension #{"Yarn" "Fiber"}, :technique "Weave",
+    :material #{"Wool" "Cotton" "Wood"},  :detail-pics 0}
    {:name "Autumn dress" :id "autumn-dress", :dimension "Textile", :technique "Sew", :detail-pics 2}
    {:name "Bear coat" :id "bear-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
    {:name "Cheonsam" :id "cheonsam", :dimension "Textile", :technique "Sew", :detail-pics 2}
