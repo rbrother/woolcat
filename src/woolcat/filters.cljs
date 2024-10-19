@@ -7,11 +7,15 @@
 
 ;; Helpers
 
+(defn attr-match [query-attr item-attr]
+  (let [item-attr-set (if (string? item-attr) #{item-attr} item-attr)]
+    (get item-attr-set query-attr)))
+
 (defn make-product-filter [{:keys [dimension technique material]}]
   (fn [{prod-dimension :dimension, prod-technique :technique, prod-material :material}]
-    (or (and dimension (= prod-dimension dimension))
-        (and technique (= prod-technique technique))
-        (and material (= prod-material material)))))
+    (or (and dimension (attr-match dimension prod-dimension))
+        (and technique (attr-match technique prod-technique))
+        (and material (attr-match material prod-material)))))
 
 (defn filter-products [products filter-info]
   (->> products

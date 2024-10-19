@@ -38,7 +38,7 @@
   [{:name "Planet chain-bag", :id "bag-earth-moon", :dimension "Fiber", :technique "Felt", :detail-pics 4}
    {:name "Pink chain-bag", :id "bag-pink-purple", :dimension "Fiber", :technique "Felt", :detail-pics 2}
    {:name "Qing", :id "qing-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 2}
-   {:name "Song", :id "song-hat", :dimension "Yarn", :technique "Crochet", :material ["Wool" "Metal"] :detail-pics 1}
+   {:name "Song", :id "song-hat", :dimension "Yarn", :technique "Crochet", :material #{"Wool" "Metal"} :detail-pics 1}
    {:name "Rockstar", :id "rockstar-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
    {:name "ZhuGe L", :id "zhuge-hat", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
    {:name "Female", :id "pink-glove", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
@@ -47,7 +47,7 @@
    {:name "Baby shoe", :id "baby-shoe", :dimension "Yarn", :technique "Knit", :detail-pics 0}
    {:name "Corona virus", :id "corona-virus", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
    {:name "Rose", :id "rose", :dimension "Yarn", :technique "Crochet", :detail-pics 0}
-   {:name "Panda bamboo tapestry", :id "panda-bamboo-tapestry", :dimension "Yarn", :technique "Weave", :detail-pics 0}
+   {:name "Panda bamboo tapestry", :id "panda-bamboo-tapestry", :dimension #{"Yarn" "Fiber"}, :technique "Weave", :detail-pics 0}
    {:name "Autumn dress" :id "autumn-dress", :dimension "Textile", :technique "Sew", :detail-pics 2}
    {:name "Bear coat" :id "bear-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
    {:name "Cheonsam" :id "cheonsam", :dimension "Textile", :technique "Sew", :detail-pics 2}
