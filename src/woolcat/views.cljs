@@ -16,7 +16,7 @@
         selected-item @(rf/subscribe [::item-page/selected-item])]
     [:div.main
      [:div
-      [:div.main-title "Chan Ann Chuang " [:span.gray "Studio"]]
+      [:div.main-title "Chan Ann Chuang " [:span.gray "Atelier"]]
       [:div.chinese-name "莊誠安"]]
      [:div.justify-end "Info"]
      (cond
