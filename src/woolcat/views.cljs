@@ -1,5 +1,6 @@
 (ns woolcat.views
   (:require
+    [accountant.core :as accountant]
     [re-frame.core :as rf]
     [woolcat.filters :as filters]
     [woolcat.items-list :as items-list]
@@ -15,8 +16,9 @@
   (let [filter @(rf/subscribe [::filters/filter])
         selected-item @(rf/subscribe [::item-page/selected-item])]
     [:div.main
-     [:div
-      [:div.main-title "Chan Ann Chuang " [:span.gray "Atelier"]]
+     [:div.link {:on-click #(accountant/navigate! "/")}
+      [:div.main-title
+       "Chan Ann Chuang " [:span.gray "Atelier"]]
       [:div.chinese-name "莊誠安"]]
      [:div.justify-end "Info"]
      (cond
