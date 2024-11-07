@@ -66,6 +66,21 @@
    {:name "Cheonsam" :id "cheonsam", :dimension "Textile", :technique "Sew", :detail-pics 2}
    {:name "Green coat" :id "green-coat", :dimension "Textile", :technique "Sew", :detail-pics 2}
    {:name "Joy dress" :id "joy-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
+   {:name "Pink handbag" :id "pink-handbag", :dimension "Textile", :technique "Sew", :detail-pics 2}
+   {:name "Plant handbag" :id "plant-handbag", :dimension "Textile", :technique "Sew", :detail-pics 3}
+   {:name "Princess dress" :id "princess-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
+   {:name "Princess line" :id "princess-line", :dimension "Textile", :technique "Sew", :detail-pics 0}
+   {:name "Season dress" :id "season-dress", :dimension "Textile", :technique "Sew", :detail-pics 0}
+   {:name "Spring coat" :id "spring-coat", :dimension "Textile", :technique "Sew", :detail-pics 1}
+   {:name "Trench coat" :id "trench-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
+   {:name "Winter AO" :id "winter-ao", :dimension "Textile", :technique "Sew", :detail-pics 4}
+   {:name "Winter coat" :id "winter-coat", :dimension "Textile", :technique "Sew", :detail-pics 1}
+
+   {:name "Fox hat 1" :id "fox-hat-1", :dimension "Skin", :technique "Sew", :detail-pics 7}
+   {:name "Gray mink glove" :id "gray-mink-glove", :dimension "Skin", :technique "Sew", :detail-pics 4}
+   {:name "White mink glove" :id "white-mink-glove", :dimension "Skin", :technique "Sew", :detail-pics 4}
+   {:name "Fox key charm" :id "fox-key-charm", :dimension "Skin", :technique "Sew", :detail-pics 3}
+
    ])
 
 (def products (mapv amend-product products-raw))
