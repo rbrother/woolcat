@@ -28,7 +28,6 @@
                  [cljs-ajax "0.8.4"]
                  [re-frame-utils "0.1.0"]
                  [camel-snake-kebab "0.4.3"]
-                 [secretary "1.2.3"] ;; Routing library
                  [venantius/accountant "0.2.5"] ;; Browser history management
                  ]
 

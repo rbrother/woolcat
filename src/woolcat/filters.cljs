@@ -1,5 +1,6 @@
 (ns woolcat.filters
   (:require
+    [accountant.core :as accountant]
     [re-frame.core :as rf]
     [woolcat.db :refer [dimensions techniques]]))
 
@@ -30,7 +31,7 @@
   (into
     [:div.product-table.col-span-2]
     (for [{:keys [name photo]} dimensions]
-      [:div.link {:on-click #(rf/dispatch [::select-dimension name])}
+      [:div.link {:on-click #(accountant/navigate! (str "/dimension/" name))}
        [:div.crop-container
         [:img.cropped-image {:src photo}]]
        [:div.margin-top wiggly-arrow name]])))
@@ -39,14 +40,14 @@
   (into
     [:div.product-table.col-span-2]
     (for [{:keys [name]} dimensions]
-      [:div.link {:on-click #(rf/dispatch [::select-dimension name])}
+      [:div.link {:on-click #(accountant/navigate! (str "/dimension/" name))}
        [:div.margin-top wiggly-arrow name]])))
 
 (defn technique-filters []
   (into
     [:div.technique-table.col-span-2]
     (for [technique techniques]
-      [:div.link {:on-click #(rf/dispatch [::select-technique technique])}
+      [:div.link {:on-click #(accountant/navigate! (str "/technique/" technique))}
        wiggly-arrow technique])))
 
 (defn material-filters []
@@ -69,8 +70,12 @@
 
 (rf/reg-event-db ::select-dimension
   (fn [db [_ name]]
-    (assoc-in db [:filter :dimension] name)))
+    (-> db
+        (assoc :filter {:dimension name})
+        (dissoc :selected-item))))
 
 (rf/reg-event-db ::select-technique
   (fn [db [_ name]]
-    (assoc-in db [:filter :technique] name)))
+    (-> db
+        (assoc :filter {:technique name})
+        (dissoc :selected-item))))

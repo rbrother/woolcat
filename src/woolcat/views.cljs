@@ -25,3 +25,7 @@
        :else [top-selection])
      [:div]
      [:div.justify-end "Studio"]]))
+
+(rf/reg-event-db ::home
+  (fn [db _]
+    (dissoc db :filter :selected-item)))

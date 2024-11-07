@@ -1,6 +1,6 @@
 (ns woolcat.items-list
-  (:require [re-frame.core :as rf]
-            [woolcat.item-page :as item-page]
+  (:require [accountant.core :as accountant]
+            [re-frame.core :as rf]
             [woolcat.filters :as filters]
             [woolcat.db :refer [products]]))
 
@@ -11,7 +11,7 @@
      (into
        [:div.product-table.col-span-2]
        (for [{:keys [name id photo]} (filters/filter-products products filter-info)]
-         [:div.link {:on-click #(rf/dispatch [::item-page/select-item id])}
+         [:div.link {:on-click #(accountant/navigate! (str "/item/" id))}
           [:div.crop-container
            [:img.cropped-image {:src photo}]]
           [:div.margin-top name]]))]))

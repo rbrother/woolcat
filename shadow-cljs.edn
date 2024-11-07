@@ -15,7 +15,6 @@
   [hashp "0.2.2"]
   [binaryage/devtools "1.0.6"]
   [camel-snake-kebab "0.4.3"]
-  [secretary "1.2.3"] ;; Routing library
   [venantius/accountant "0.2.5"] ;; Browser history management
   ]
 
@@ -25,7 +24,7 @@
 
  :builds
  {:app
-  {:target     :browser
+  {:target :browser
    :output-dir "resources/public/js/compiled"
    :asset-path "/js/compiled"
    :modules
@@ -35,4 +34,4 @@
    :dev
    {:compiler-options
     {:closure-defines
-     { }}}}}}
+     {}}}}}}
