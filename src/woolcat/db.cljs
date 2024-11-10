@@ -35,9 +35,9 @@
   ["Cotton" "Wool" "Leather" "Paper" "Metal" "Wood"])
 
 (def products-raw
-  [{:name "Planet chain-bag", :id "bag-earth-moon", :dimension "Fiber", :technique "Felt",
+  [{:name "Planet Chain-bag", :id "bag-earth-moon", :dimension "Fiber", :technique "Felt",
     :material #{"Wool" "Metal"}, :detail-pics 4}
-   {:name "Pink chain-bag", :id "bag-pink-purple", :dimension "Fiber", :technique "Felt",
+   {:name "Pink Chain-bag", :id "bag-pink-purple", :dimension "Fiber", :technique "Felt",
     :material #{"Wool" "Metal"}, :detail-pics 2}
    {:name "Qing", :id "qing-hat", :dimension "Yarn", :technique "Crochet",
     :material "Wool", :detail-pics 2}
@@ -47,39 +47,39 @@
     :material #{"Cotton" "Wool"}, :detail-pics 0}
    {:name "ZhuGe L", :id "zhuge-hat", :dimension "Yarn", :technique "Crochet",
     :material "Wool", :detail-pics 0}
-   {:name "Female", :id "pink-glove", :dimension "Yarn", :technique "Crochet",
+   {:name "Female Glove", :id "pink-glove", :dimension "Yarn", :technique "Crochet",
     :material "Wool", :detail-pics 0}
-   {:name "Male", :id "gray-glove", :dimension "Yarn", :technique "Crochet",
+   {:name "Male Glove", :id "gray-glove", :dimension "Yarn", :technique "Crochet",
     :material "Wool", :detail-pics 0}
-   {:name "Surgeon", :id "surgeon-glove", :dimension "Yarn", :technique "Knit",
+   {:name "Surgeon Glove", :id "surgeon-glove", :dimension "Yarn", :technique "Knit",
     :material "Wool", :detail-pics 0}
-   {:name "Baby shoe", :id "baby-shoe", :dimension "Yarn", :technique "Knit",
+   {:name "Baby Shoe", :id "baby-shoe", :dimension "Yarn", :technique "Knit",
     :material "Wool", :detail-pics 0}
-   {:name "Corona virus", :id "corona-virus", :dimension "Yarn", :technique "Crochet",
+   {:name "Corona Virus", :id "corona-virus", :dimension "Yarn", :technique "Crochet",
     :material "Wool", :detail-pics 0}
    {:name "Rose", :id "rose", :dimension "Yarn", :technique "Crochet",
     :material #{"Cotton" "Wool" "Metal"}, :detail-pics 0}
-   {:name "Panda bamboo tapestry", :id "panda-bamboo-tapestry", :dimension #{"Yarn" "Fiber"}, :technique "Weave",
+   {:name "Panda Bamboo Tapestry", :id "panda-bamboo-tapestry", :dimension #{"Yarn" "Fiber"}, :technique "Weave",
     :material #{"Wool" "Cotton" "Wood"},  :detail-pics 0}
-   {:name "Autumn dress" :id "autumn-dress", :dimension "Textile", :technique "Sew", :detail-pics 2}
-   {:name "Bear coat" :id "bear-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
+   {:name "Autumn Dress" :id "autumn-dress", :dimension "Textile", :technique "Sew", :detail-pics 2}
+   {:name "Bear Coat" :id "bear-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
    {:name "Cheonsam" :id "cheonsam", :dimension "Textile", :technique "Sew", :detail-pics 2}
-   {:name "Green coat" :id "green-coat", :dimension "Textile", :technique "Sew", :detail-pics 2}
-   {:name "Joy dress" :id "joy-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
-   {:name "Pink handbag" :id "pink-handbag", :dimension "Textile", :technique "Sew", :detail-pics 2}
-   {:name "Plant handbag" :id "plant-handbag", :dimension "Textile", :technique "Sew", :detail-pics 3}
-   {:name "Princess dress" :id "princess-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
-   {:name "Princess line" :id "princess-line", :dimension "Textile", :technique "Sew", :detail-pics 0}
-   {:name "Season dress" :id "season-dress", :dimension "Textile", :technique "Sew", :detail-pics 0}
-   {:name "Spring coat" :id "spring-coat", :dimension "Textile", :technique "Sew", :detail-pics 1}
-   {:name "Trench coat" :id "trench-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
-   {:name "Winter AO" :id "winter-ao", :dimension "Textile", :technique "Sew", :detail-pics 4}
-   {:name "Winter coat" :id "winter-coat", :dimension "Textile", :technique "Sew", :detail-pics 1}
+   {:name "Green Coat" :id "green-coat", :dimension "Textile", :technique "Sew", :detail-pics 2}
+   {:name "Joy Dress" :id "joy-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
+   {:name "Pink Handbag" :id "pink-handbag", :dimension "Textile", :technique "Sew", :detail-pics 2}
+   {:name "Plant Handbag" :id "plant-handbag", :dimension "Textile", :technique "Sew", :detail-pics 3}
+   {:name "Princess Dress" :id "princess-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
+   {:name "Princess Line Dress" :id "princess-line", :dimension "Textile", :technique "Sew", :detail-pics 0}
+   {:name "Season Dress" :id "season-dress", :dimension "Textile", :technique "Sew", :detail-pics 0}
+   {:name "Spring Coat" :id "spring-coat", :dimension "Textile", :technique "Sew", :detail-pics 1}
+   {:name "Trench Coat" :id "trench-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
+   {:name "Long Winter Coat" :id "winter-ao", :dimension "Textile", :technique "Sew", :detail-pics 4}
+   {:name "Winter Coat" :id "winter-coat", :dimension "Textile", :technique "Sew", :detail-pics 1}
 
-   {:name "Fox hat 1" :id "fox-hat-1", :dimension "Skin", :technique "Sew", :detail-pics 7}
-   {:name "Gray mink glove" :id "gray-mink-glove", :dimension "Skin", :technique "Sew", :detail-pics 4}
-   {:name "White mink glove" :id "white-mink-glove", :dimension "Skin", :technique "Sew", :detail-pics 4}
-   {:name "Fox key charm" :id "fox-key-charm", :dimension "Skin", :technique "Sew", :detail-pics 3}
+   {:name "Fox Hat 1" :id "fox-hat-1", :dimension "Skin", :technique "Sew", :detail-pics 7}
+   {:name "Gray Mink Glove" :id "gray-mink-glove", :dimension "Skin", :technique "Sew", :detail-pics 4}
+   {:name "White Mink Glove" :id "white-mink-glove", :dimension "Skin", :technique "Sew", :detail-pics 4}
+   {:name "Fox Bag Charm" :id "fox-key-charm", :dimension "Skin", :technique "Sew", :detail-pics 3}
 
    ])
 
