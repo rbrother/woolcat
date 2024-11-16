@@ -45,14 +45,13 @@
   (accountant/configure-navigation!
     {:nav-handler (fn [path]
                     (print [:nav-handler path])
+                    (js/window.scrollTo 0 0)
                     (->> routes
                          (map (fn [{:keys [regex] :as route}]
                                 (assoc route :matches (re-matches regex path))))
                          (find-first :matches)
                          dispatch-route!))
-     :path-exists? (fn [path]
-                     (print [:path-exists? path])
-                     true)})
+     :path-exists? (fn [_path] true)})
   (accountant/dispatch-current!))
 
 (defn init []
