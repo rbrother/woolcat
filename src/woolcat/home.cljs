@@ -1,4 +1,4 @@
-(ns woolcat.views
+(ns woolcat.home
   (:require
     [accountant.core :as accountant]
     [re-frame.core :as rf]
