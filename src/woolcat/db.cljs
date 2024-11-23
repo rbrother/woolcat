@@ -2,9 +2,6 @@
   (:require [medley.core :refer [index-by]]
             [re-frame.core :as rf]))
 
-(def default-db
-  {})
-
 ;; All pics in dropbox
 ;; https://www.dropbox.com/scl/fo/k92lhu64t31v0yhg99kli/ALTQYZFlBq8hA8jbh5mciXM?rlkey=u9p2d55n1hm3rvxemtzkx36cc&e=1&dl=0
 
@@ -25,7 +22,8 @@
    {:name "Skin"
     :photo (str img-base "skin.jpg")}
    {:name "Paper"
-    :photo (str img-base "paper.jpg")}])
+    :photo (str img-base "paper.jpg")}
+   ])
 
 (def techniques
   ["Felt" "Knit" "Crochet" "Weave" "Sew" "Origami"])
@@ -90,6 +88,14 @@
    {:name "Bunny and Chicken" :id "bunny-and-chicken", :dimension "Paper", :technique "Origami", :detail-pics 2}
    {:name "Cactus" :id "cactus", :dimension "Paper", :technique "Origami", :detail-pics 2}
    {:name "Ruby" :id "ruby", :dimension "Paper", :technique "Origami", :detail-pics 2}
+   ;; STUDIO
+   {:name "Egg holder" :id "egg-holder", :dimension "Hardware", :technique "", :detail-pics 1}
+   {:name "Mushroom 1" :id "mushroom1", :dimension "Hardware", :technique "", :detail-pics 6}
+   {:name "Mushroom 2" :id "mushroom2", :dimension "Hardware", :technique "", :detail-pics 2}
+   {:name "Mushroom 3" :id "mushroom3", :dimension "Hardware", :technique "", :detail-pics 3}
+   {:name "Pool" :id "pool", :dimension "Hardware", :technique "", :detail-pics 1}
+   {:name "Zen Pumpkin" :id "pumpkins", :dimension "Hardware", :technique "", :detail-pics 5}
+
    ])
 
 (def products (mapv amend-product products-raw))

@@ -26,7 +26,10 @@
        filter [items-list/view filter]
        :else [top-selection])
      [:div]
-     [:div.justify-end "Studio"]]))
+     [:div.justify-end
+      [:div.pad "Studio"]
+      [:div.pad.link {:on-click #(accountant/navigate! "/dimension/Hardware")}
+       "Hardware"]]]))
 
 (rf/reg-event-db ::home
   (fn [db _]
