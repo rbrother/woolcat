@@ -88,14 +88,18 @@
    {:name "Bunny and Chicken" :id "bunny-and-chicken", :dimension "Paper", :technique "Origami", :detail-pics 2}
    {:name "Cactus" :id "cactus", :dimension "Paper", :technique "Origami", :detail-pics 2}
    {:name "Ruby" :id "ruby", :dimension "Paper", :technique "Origami", :detail-pics 2}
-   ;; STUDIO
    {:name "Egg holder" :id "egg-holder", :dimension "Hardware", :technique "", :detail-pics 1}
    {:name "Mushroom 1" :id "mushroom1", :dimension "Hardware", :technique "", :detail-pics 6}
    {:name "Mushroom 2" :id "mushroom2", :dimension "Hardware", :technique "", :detail-pics 2}
    {:name "Mushroom 3" :id "mushroom3", :dimension "Hardware", :technique "", :detail-pics 3}
    {:name "Pool" :id "pool", :dimension "Hardware", :technique "", :detail-pics 1}
    {:name "Zen Pumpkin" :id "pumpkins", :dimension "Hardware", :technique "", :detail-pics 5}
-
+   {:name "Big Flower Pot" :id "big-flower-pot", :dimension "Hardware", :technique "", :detail-pics 1}
+   {:name "Eco Pot 0" :id "eco-pot-0", :dimension "Hardware", :technique "", :detail-pics 2}
+   {:name "Flower Pot" :id "flower-pot", :dimension "Hardware", :technique "", :detail-pics 2}
+   {:name "Jewellery Box" :id "jewellery-box", :dimension "Hardware", :technique "", :detail-pics 5}
+   {:name "Oasis Platter" :id "oasis-platter", :dimension "Hardware", :technique "", :detail-pics 1}
+   {:name "Tray" :id "tray", :dimension "Hardware", :technique "", :detail-pics 1}
    ])
 
 (def products (mapv amend-product products-raw))
