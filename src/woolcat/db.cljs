@@ -12,94 +12,79 @@
               :detail-photos (->> (range 1 (inc detail-pics))
                                   (map (fn [index] (str img-base "products/" id "/detail" index ".jpg"))))))
 
-(def dimensions
-  [{:name "Fiber"
-    :photo (str img-base "fiber.jpg")}
-   {:name "Yarn"
-    :photo (str img-base "yarn.jpg")}
-   {:name "Textile"
-    :photo (str img-base "textile.jpg")}
-   {:name "Skin"
-    :photo (str img-base "skin.jpg")}
-   {:name "Paper"
-    :photo (str img-base "paper.jpg")}
+(def tags
+  [{:name "Fiber", :photo (str img-base "fiber.jpg")}
+   {:name "Yarn", :photo (str img-base "yarn.jpg")}
+   {:name "Fabric", :photo (str img-base "textile.jpg")}
+   {:name "Skin", :photo (str img-base "skin.jpg")}
+   {:name "Paper", :photo (str img-base "paper.jpg")}
+   {:name "Felt", :photo (str img-base "Felt.jpg")}
+   {:name "Knit & Crochet", :photo (str img-base "Knit-Crochet.jpg")}
+   {:name "Weave & PomPom", :photo (str img-base "Weave-PomPom.jpg")}
+   {:name "Sew", :photo (str img-base "Sew.jpg")}
+   {:name "Origami", :photo (str img-base "Origami.jpg")}
+   {:name "Hats", :photo (str img-base "Hats.jpg")}
+   {:name "Clothes", :photo (str img-base "Clothes.jpg")}
+   {:name "Accessories", :photo (str img-base "Gloves-Shoes.jpg")}
+   {:name "Bags", :photo (str img-base "Bags.jpg")}
+   {:name "Home Decor", :photo (str img-base "Home-Decor.jpg")}
    ])
 
-(def techniques
-  ["Felt" "Knit" "Crochet" "Weave" "Sew" "Origami"])
-
-(def materials
-  ["Cotton" "Wool" "Leather" "Paper" "Metal" "Wood"])
-
 (def products-raw
-  [{:name "Planet Chain-bag", :id "bag-earth-moon", :dimension "Fiber", :technique "Felt",
-    :material #{"Wool" "Metal"}, :detail-pics 4}
-   {:name "Pink Chain-bag", :id "bag-pink-purple", :dimension "Fiber", :technique "Felt",
-    :material #{"Wool" "Metal"}, :detail-pics 2}
-   {:name "Qing", :id "qing-hat", :dimension "Yarn", :technique "Crochet",
-    :material "Wool", :detail-pics 4}
-   {:name "Song", :id "song-hat", :dimension "Yarn", :technique "Crochet",
-    :material #{"Cotton" "Metal"} :detail-pics 2}
-   {:name "Rockstar", :id "rockstar-hat", :dimension "Yarn", :technique "Crochet",
-    :material #{"Cotton" "Wool"}, :detail-pics 0}
-   {:name "ZhuGe L", :id "zhuge-hat", :dimension "Yarn", :technique "Crochet",
-    :material "Wool", :detail-pics 0}
-   {:name "Female Glove", :id "pink-glove", :dimension "Yarn", :technique "Crochet",
-    :material "Wool", :detail-pics 0}
-   {:name "Male Glove", :id "gray-glove", :dimension "Yarn", :technique "Crochet",
-    :material "Wool", :detail-pics 0}
-   {:name "Surgeon Glove", :id "surgeon-glove", :dimension "Yarn", :technique "Knit",
-    :material "Wool", :detail-pics 0}
-   {:name "Baby Shoe", :id "baby-shoe", :dimension "Yarn", :technique "Knit",
-    :material "Wool", :detail-pics 0}
-   {:name "Corona Virus", :id "corona-virus", :dimension "Yarn", :technique "Crochet",
-    :material "Wool", :detail-pics 0}
-   {:name "Rose", :id "rose", :dimension "Yarn", :technique "Crochet",
-    :material #{"Cotton" "Wool" "Metal"}, :detail-pics 0}
-   {:name "Orchid", :id "orchid", :dimension "Yarn", :technique "Crochet",
-    :material #{"Cotton" "Wool" "Metal"}, :detail-pics 1}
-   {:name "Lily of Valley", :id "lily-of-valley", :dimension "Yarn", :technique "Crochet",
-    :material #{"Cotton" "Wool" "Metal"}, :detail-pics 1}
-   {:name "Panda Bamboo Tapestry", :id "panda-bamboo-tapestry", :dimension #{"Yarn" "Fiber"}, :technique "Weave",
-    :material #{"Wool" "Cotton" "Wood"}, :detail-pics 0}
-   {:name "Autumn Dress" :id "autumn-dress", :dimension "Textile", :technique "Sew", :detail-pics 2}
-   {:name "Bear Coat" :id "bear-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
-   {:name "Cheonsam" :id "cheonsam", :dimension "Textile", :technique "Sew", :detail-pics 2}
-   {:name "Green Coat" :id "green-coat", :dimension "Textile", :technique "Sew", :detail-pics 2}
-   {:name "Joy Dress" :id "joy-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
-   {:name "Pink Handbag" :id "pink-handbag", :dimension "Textile", :technique "Sew", :detail-pics 2}
-   {:name "Plant Handbag" :id "plant-handbag", :dimension "Textile", :technique "Sew", :detail-pics 3}
-   {:name "Princess Dress" :id "princess-dress", :dimension "Textile", :technique "Sew", :detail-pics 4}
-   {:name "Princess Line Dress" :id "princess-line", :dimension "Textile", :technique "Sew", :detail-pics 0}
-   {:name "Season Dress" :id "season-dress", :dimension "Textile", :technique "Sew", :detail-pics 0}
-   {:name "Spring Coat" :id "spring-coat", :dimension "Textile", :technique "Sew", :detail-pics 1}
-   {:name "Trench Coat" :id "trench-coat", :dimension "Textile", :technique "Sew", :detail-pics 3}
-   {:name "Long Winter Coat" :id "winter-ao", :dimension "Textile", :technique "Sew", :detail-pics 4}
-   {:name "Winter Coat" :id "winter-coat", :dimension "Textile", :technique "Sew", :detail-pics 1}
-   {:name "Fox Hat 1" :id "fox-hat-1", :dimension "Skin", :technique "Sew", :detail-pics 7}
-   {:name "Gray Mink Glove" :id "gray-mink-glove", :dimension "Skin", :technique "Sew", :detail-pics 4}
-   {:name "White Mink Glove" :id "white-mink-glove", :dimension "Skin", :technique "Sew", :detail-pics 4}
-   {:name "Fox Bag Charm" :id "fox-key-charm", :dimension "Skin", :technique "Sew", :detail-pics 3}
-   {:name "Hare Bag" :id "hare-bag", :dimension "Skin", :technique "Sew", :detail-pics 5}
-   {:name "Lamp Cover 1" :id "lamp-cover-1", :dimension "Paper", :technique "Origami", :detail-pics 1}
-   {:name "Lamp Cover 2" :id "lamp-cover-2", :dimension "Paper", :technique "Origami", :detail-pics 1}
-   {:name "Organic Lamp Cover" :id "organic-lamp-cover", :dimension "Paper", :technique "Origami", :detail-pics 1}
-   {:name "Asian Lamp Cover" :id "asian-lamp-cover", :dimension "Paper", :technique "Origami", :detail-pics 1}
-   {:name "Bunny and Chicken" :id "bunny-and-chicken", :dimension "Paper", :technique "Origami", :detail-pics 2}
-   {:name "Cactus" :id "cactus", :dimension "Paper", :technique "Origami", :detail-pics 2}
-   {:name "Ruby" :id "ruby", :dimension "Paper", :technique "Origami", :detail-pics 2}
-   {:name "Egg holder" :id "egg-holder", :dimension "Hardware", :technique "", :detail-pics 1}
-   {:name "Mushroom 1" :id "mushroom1", :dimension "Hardware", :technique "", :detail-pics 6}
-   {:name "Mushroom 2" :id "mushroom2", :dimension "Hardware", :technique "", :detail-pics 2}
-   {:name "Mushroom 3" :id "mushroom3", :dimension "Hardware", :technique "", :detail-pics 3}
-   {:name "Pool" :id "pool", :dimension "Hardware", :technique "", :detail-pics 1}
-   {:name "Zen Pumpkin" :id "pumpkins", :dimension "Hardware", :technique "", :detail-pics 5}
-   {:name "Big Flower Pot" :id "big-flower-pot", :dimension "Hardware", :technique "", :detail-pics 1}
-   {:name "Eco Pot 0" :id "eco-pot-0", :dimension "Hardware", :technique "", :detail-pics 2}
-   {:name "Flower Pot" :id "flower-pot", :dimension "Hardware", :technique "", :detail-pics 2}
-   {:name "Jewellery Box" :id "jewellery-box", :dimension "Hardware", :technique "", :detail-pics 5}
-   {:name "Oasis Platter" :id "oasis-platter", :dimension "Hardware", :technique "", :detail-pics 1}
-   {:name "Tray" :id "tray", :dimension "Hardware", :technique "", :detail-pics 1}
+  [{:name "Planet Chain-bag", :id "bag-earth-moon", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 4 }
+   {:name "Pink Chain-bag", :id "bag-pink-purple", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 2}
+   {:name "Qing", :id "qing-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 4}
+   {:name "Song", :id "song-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 2}
+   {:name "Rockstar", :id "rockstar-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 0}
+   {:name "ZhuGe L", :id "zhuge-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"} :detail-pics 0}
+   {:name "Female Glove", :id "pink-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
+   {:name "Male Glove", :id "gray-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"} :detail-pics 0}
+   {:name "Surgeon Glove", :id "surgeon-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
+   {:name "Baby Shoe", :id "baby-shoe", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
+   {:name "Corona Virus", :id "corona-virus", :tags #{"Yarn" "Knit & Crochet"} :detail-pics 0}
+   {:name "Rose", :id "rose", :tags #{"Yarn" "Knit & Crochet" "Home Decor"}, :detail-pics 0}
+   {:name "Orchid", :id "orchid", :tags #{"Yarn" "Knit & Crochet" "Home Decor"}, :detail-pics 1}
+   {:name "Lily of Valley", :id "lily-of-valley", :tags #{"Yarn" "Knit & Crochet" "Home Decor"}, :detail-pics 1}
+   {:name "Panda Bamboo Tapestry", :id "panda-bamboo-tapestry", :tags #{"Yarn" "Fiber" "Weave & PomPom" "Home Decor"}, :detail-pics 0}
+   {:name "Autumn Dress" :id "autumn-dress", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 2}
+   {:name "Bear Coat" :id "bear-coat", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 3}
+   {:name "Cheonsam" :id "cheonsam", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 2}
+   {:name "Green Coat" :id "green-coat", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 2}
+   {:name "Joy Dress" :id "joy-dress", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 4}
+   {:name "Pink Handbag" :id "pink-handbag", :tags #{"Fabric" "Sew" "Bags"}, :detail-pics 2}
+   {:name "Plant Handbag" :id "plant-handbag", :tags #{"Fabric" "Sew" "Bags"}, :detail-pics 3}
+   {:name "Princess Dress" :id "princess-dress", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 4}
+   {:name "Princess Line Dress" :id "princess-line", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 0}
+   {:name "Season Dress" :id "season-dress", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 0}
+   {:name "Spring Coat" :id "spring-coat", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 1}
+   {:name "Trench Coat" :id "trench-coat", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 3}
+   {:name "Long Winter Coat" :id "winter-ao", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 4}
+   {:name "Winter Coat" :id "winter-coat", :tags #{"Fabric" "Sew" "Clothes"}, :detail-pics 1}
+   {:name "Fox Hat 1" :id "fox-hat-1", :tags #{"Skin" "Sew" "Hats"}, :detail-pics 7}
+   {:name "Gray Mink Glove" :id "gray-mink-glove", :tags #{"Skin" "Sew" "Accessories"}, :detail-pics 4}
+   {:name "White Mink Glove" :id "white-mink-glove", :tags #{"Skin" "Sew" "Accessories"}, :detail-pics 4}
+   {:name "Fox Bag Charm" :id "fox-key-charm", :tags #{"Skin" "Sew" "Accessories"}, :detail-pics 3}
+   {:name "Hare Bag" :id "hare-bag", :tags #{"Skin" "Sew" "Bags"}, :detail-pics 5}
+   {:name "Lamp Cover 1" :id "lamp-cover-1", :tags #{"Paper" "Origami" "Home Decor"}, :detail-pics 1}
+   {:name "Lamp Cover 2" :id "lamp-cover-2", :tags #{"Paper" "Origami" "Home Decor"}, :detail-pics 1}
+   {:name "Organic Lamp Cover" :id "organic-lamp-cover", :tags #{"Paper" "Origami" "Home Decor"}, :detail-pics 1}
+   {:name "Asian Lamp Cover" :id "asian-lamp-cover", :tags #{"Paper" "Origami" "Home Decor"}, :detail-pics 1}
+   {:name "Bunny and Chicken" :id "bunny-and-chicken", :tags #{"Paper" "Origami" "Home Decor"}, :detail-pics 2}
+   {:name "Cactus" :id "cactus", :tags #{"Paper" "Origami" "Home Decor"}, :detail-pics 2}
+   {:name "Ruby" :id "ruby", :tags #{"Paper" "Origami" "Home Decor"}, :detail-pics 2}
+
+   {:name "Egg holder" :id "egg-holder", :tags #{"Hardware"}, :detail-pics 1}
+   {:name "Mushroom 1" :id "mushroom1", :tags #{"Hardware"}, :detail-pics 6}
+   {:name "Mushroom 2" :id "mushroom2", :tags #{"Hardware"}, :detail-pics 2}
+   {:name "Mushroom 3" :id "mushroom3", :tags #{"Hardware"}, :detail-pics 3}
+   {:name "Pool" :id "pool", :tags #{"Hardware"}, :detail-pics 1}
+   {:name "Zen Pumpkin" :id "pumpkins", :tags #{"Hardware"}, :detail-pics 5}
+   {:name "Big Flower Pot" :id "big-flower-pot", :tags #{"Hardware"}, :detail-pics 1}
+   {:name "Eco Pot 0" :id "eco-pot-0", :tags #{"Hardware"}, :detail-pics 2}
+   {:name "Flower Pot" :id "flower-pot", :tags #{"Hardware"}, :detail-pics 2}
+   {:name "Jewellery Box" :id "jewellery-box", :tags #{"Hardware"}, :detail-pics 5}
+   {:name "Oasis Platter" :id "oasis-platter", :tags #{"Hardware"}, :detail-pics 1}
+   {:name "Tray" :id "tray", :tags #{"Hardware"}, :detail-pics 1}
    ])
 
 (def products (mapv amend-product products-raw))

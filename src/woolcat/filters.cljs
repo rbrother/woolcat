@@ -1,81 +1,46 @@
 (ns woolcat.filters
   (:require
+    [medley.core :refer [find-first]]
     [accountant.core :as accountant]
     [re-frame.core :as rf]
-    [woolcat.db :refer [dimensions techniques]]))
+    [woolcat.db :refer [tags]]))
 
 (def wiggly-arrow [:span.large {:style {:position "relative" :top "2px"}} "⇝ "])
 
 ;; Helpers
 
-(defn attr-match [query-attr item-attr]
-  (let [item-attr-set (if (string? item-attr) #{item-attr} item-attr)]
-    (get item-attr-set query-attr)))
-
-(defn make-product-filter [{:keys [dimension technique material]}]
-  (fn [{prod-dimension :dimension, prod-technique :technique, prod-material :material}]
-    (or (and dimension (attr-match dimension prod-dimension))
-        (and technique (attr-match technique prod-technique))
-        (and material (attr-match material prod-material)))))
-
-(defn filter-products [products filter-info]
+(defn filter-products [products tag]
   (->> products
-       (filter (make-product-filter filter-info))))
+       (filter (fn [{tags :tags}] (get tags tag)))))
 
 ;; Views
 
-(defn filter-label [{:keys [dimension technique material]}]
-  [:div (or dimension technique material)])
-
-(defn dimension-filters-with-pics []
+;; TODO: Allow number of items per row to decrease on narrow screens from 5
+;; But limit their number to 5 even on very wide screens
+(defn filters-with-pics []
   (into
     [:div.product-table.col-span-2]
-    (for [{:keys [name photo]} dimensions]
-      [:div.link {:on-click #(accountant/navigate! (str "/dimension/" name))}
+    (for [{:keys [name photo]} tags]
+      [:div.link {:on-click #(accountant/navigate! (str "/items/" name))}
        [:div.crop-container
         [:img.cropped-image {:src photo}]]
        [:div.margin-top wiggly-arrow name]])))
 
-(defn dimension-filters []
+(defn filters-without-pics []
   (into
-    [:div.product-table.col-span-2]
-    (for [{:keys [name]} dimensions]
-      [:div.link {:on-click #(accountant/navigate! (str "/dimension/" name))}
-       [:div.margin-top wiggly-arrow name]])))
-
-(defn technique-filters []
-  (into
-    [:div.technique-table.col-span-2]
-    (for [technique techniques]
-      [:div.link {:on-click #(accountant/navigate! (str "/technique/" technique))}
-       wiggly-arrow technique])))
-
-(defn material-filters []
-  [:div "** material-filters not implemented yet *"])
-
-(defn current-filter []
-  (let [{:keys [dimension technique material]} @(rf/subscribe [::filter])]
-    (cond
-      dimension [dimension-filters]
-      technique [technique-filters]
-      material [material-filters]
-      :else nil)))
+    [:div.links-table.col-span-2]
+    (for [{:keys [name]} tags]
+      [:div.link {:on-click #(accountant/navigate! (str "/items/" name))}
+       [:div wiggly-arrow name]])))
 
 ;; Subs
 
-(rf/reg-sub ::filter
-  (fn [db] (:filter db)))
+(rf/reg-sub ::filter (fn [db] (:filter db)))
 
 ;; Events
 
-(rf/reg-event-db ::select-dimension
-  (fn [db [_ name]]
+(rf/reg-event-db ::select-items
+  (fn [db [_ filter-name]]
     (-> db
-        (assoc :filter {:dimension name})
-        (dissoc :selected-item))))
-
-(rf/reg-event-db ::select-technique
-  (fn [db [_ name]]
-    (-> db
-        (assoc :filter {:technique name})
+        (assoc :filter filter-name)
         (dissoc :selected-item))))

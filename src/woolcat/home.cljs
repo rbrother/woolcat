@@ -9,8 +9,7 @@
 (defn top-selection []
   [:<>
    [:div.col-span-2] ;; spacer
-   [filters/dimension-filters-with-pics]
-   [filters/technique-filters]])
+   [filters/filters-with-pics]])
 
 (defn main-panel []
   (let [filter @(rf/subscribe [::filters/filter])

@@ -41,6 +41,10 @@
    {:display "grid"
     :grid-template-columns "repeat(5, 200px)"
     :gap "40px"}]
+  [:div.links-table
+   {:display "grid"
+    :grid-template-columns "repeat(5, 200px)"
+    :gap "8px"}]
   [:div.technique-table
    {:display "grid"
     :grid-template-columns "repeat(6, 120px)"

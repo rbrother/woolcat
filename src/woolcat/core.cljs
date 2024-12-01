@@ -25,9 +25,8 @@
     (rdom/render [home/main-panel] root-el)))
 
 (def routes
-  [{:regex #"/item/([\w\-]+)", :dispatch [:woolcat.item-page/select-item]}
-   {:regex #"/dimension/([\w\-]+)", :dispatch [:woolcat.filters/select-dimension]}
-   {:regex #"/technique/([\w\-]+)", :dispatch [:woolcat.filters/select-technique]}
+  [{:regex #"/item/(.+)", :dispatch [:woolcat.item-page/select-item]}
+   {:regex #"/items/(.+)", :dispatch [:woolcat.filters/select-items]}
    {:regex #".*", :dispatch [::home/home]} ;; Default route, match anything else
    ])
 
