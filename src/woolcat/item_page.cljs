@@ -5,13 +5,12 @@
 
 (defn view []
   (let [item-id @(rf/subscribe [::selected-item])
-        {:keys [name dimension technique material photo detail-photos] :as item} (get db/products-index item-id)
-        all-photos (concat [photo] detail-photos)
-        material-arr (if (string? material) #{material} material)]
+        {:keys [name tags photo detail-photos] :as _item} (get db/products-index item-id)
+        all-photos (concat [photo] detail-photos)]
     (into [:<>
            [:div.col-span-2
             [:p.main-title name]
-            (when material [:div "Material: " (str/join ", " material-arr)])]]
+            [:div (str/join ", " tags)]]]
           (for [photo all-photos]
             [:div.col-span-2.justify-center
              [:img.large-photo {:src photo}]]))))
