@@ -4,11 +4,12 @@
             [woolcat.filters :as filters]
             [woolcat.db :refer [products]]))
 
-(defn view [filter]
+(defn view [tag]
   [:<>
+   [:div.main-title tag]
    (into
      [:div.product-table.col-span-2]
-     (for [{:keys [name id photo]} (filters/filter-products products filter)]
+     (for [{:keys [name id photo]} (filters/filter-products products tag)]
        [:div.link {:on-click #(accountant/navigate! (str "/item/" id))}
         [:div.crop-container
          [:img.cropped-image {:src photo}]]
