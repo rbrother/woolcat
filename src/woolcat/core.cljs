@@ -31,7 +31,8 @@
    ])
 
 (defn dispatch-route! [{:keys [matches dispatch]}]
-  (rf/dispatch (vec (concat dispatch (rest matches)))))
+  (let [params (->> matches rest (map js/decodeURIComponent))]
+    (rf/dispatch (vec (concat dispatch params)))))
 
 (defn setup-routes []
   (accountant/configure-navigation!
