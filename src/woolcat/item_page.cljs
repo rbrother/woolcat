@@ -1,6 +1,5 @@
 (ns woolcat.item-page
-  (:require [clojure.string :as str]
-            [re-frame.core :as rf]
+  (:require [re-frame.core :as rf]
             [woolcat.db :as db]))
 
 (defn view []
@@ -10,7 +9,7 @@
     (into [:<>
            [:div.col-span-2
             [:p.main-title name]
-            [:div (str/join ", " tags)]]]
+            (into [:div] (interpose ", " (for [tag tags] [:a {:href (str "/items/" tag)} tag])))]]
           (for [photo all-photos]
             [:div.col-span-2.justify-center
              [:img.large-photo {:src photo}]]))))
