@@ -7,8 +7,9 @@
 
 (def img-base "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/")
 
-(defn amend-product [{:keys [id detail-pics] :as info}]
-  (assoc info :photo (str img-base "products/" id ".jpg")
+(defn amend-product [{:keys [id detail-pics folder] :as info}]
+  (assoc info :photo (if folder (str img-base "products/" id "/main.jpg")
+                       (str img-base "products/" id ".jpg"))
               :detail-photos (->> (range 1 (inc detail-pics))
                                   (map (fn [index] (str img-base "products/" id "/detail" index ".jpg"))))))
 
@@ -68,10 +69,14 @@
    {:name "Emperors Yellow Jacket" :id "emperors-yellow-jacket", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
    {:name "Pink Handbag" :id "pink-handbag", :tags #{"Fabric" "Bags"}, :detail-pics 2}
    {:name "Plant Handbag" :id "plant-handbag", :tags #{"Fabric" "Bags"}, :detail-pics 3}
+   {:name "Backpack" :id "backpack", :tags #{"Fabric" "Bags"}, :detail-pics 1, :folder true}
+   {:name "Cosmetic Bag 1" :id "cosmetic-bag-1", :tags #{"Fabric" "Accessories"}, :detail-pics 3, :folder true}
+   {:name "Cosmetic Bag 2" :id "cosmetic-bag-2", :tags #{"Fabric" "Accessories"}, :detail-pics 3, :folder true}
    {:name "Fox Hat 1" :id "fox-hat-1", :tags #{"Leather & Fur" "Hats"}, :detail-pics 7}
-   {:name "Gray Mink Glove" :id "gray-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 4}
+   {:name "Gray Mink Glove" :id "gray-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 7}
    {:name "White Mink Glove" :id "white-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 4}
-   {:name "Fox Bag Charm" :id "fox-key-charm", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 3}
+   {:name "Orange Mitten" :id "orange-mitten", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 1}
+   {:name "Fox Bag Charm" :id "fox-key-charm", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 5}
    {:name "Hare Bag" :id "hare-bag", :tags #{"Leather & Fur" "Bags"}, :detail-pics 5}
    {:name "Lamp Cover 1" :id "lamp-cover-1", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1}
    {:name "Lamp Cover 2" :id "lamp-cover-2", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1}
@@ -80,6 +85,7 @@
    {:name "Bunny and Chicken" :id "bunny-and-chicken", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 3}
    {:name "Cactus" :id "cactus", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2}
    {:name "Ruby" :id "ruby", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2}
+   ;; Hardware
    {:name "Egg holder" :id "egg-holder", :tags #{"Hardware"}, :detail-pics 1}
    {:name "Mushroom 1" :id "mushroom1", :tags #{"Hardware"}, :detail-pics 6}
    {:name "Mushroom 2" :id "mushroom2", :tags #{"Hardware"}, :detail-pics 2}
@@ -92,7 +98,7 @@
    {:name "Jewellery Box" :id "jewellery-box", :tags #{"Hardware"}, :detail-pics 5}
    {:name "Oasis Platter" :id "oasis-platter", :tags #{"Hardware"}, :detail-pics 1}
    {:name "Tray" :id "tray", :tags #{"Hardware"}, :detail-pics 1}
-
+   ;; Studio
    {:name "Popeye", :id "popeye", :tags #{"Studio"}, :detail-pics 4}
    ])
 
