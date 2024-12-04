@@ -42,13 +42,13 @@
    {:name "Qing", :id "qing-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 4}
    {:name "Song", :id "song-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 2}
    {:name "Rockstar", :id "rockstar-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 0}
-   {:name "ZhuGe L", :id "zhuge-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"} :detail-pics 0}
+   {:name "ZhuGe L", :id "zhuge-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"} :detail-pics 2, :folder true}
    {:name "Female Glove", :id "pink-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
    {:name "Male Glove", :id "gray-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"} :detail-pics 0}
    {:name "Surgeon Glove", :id "surgeon-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
    {:name "Baby Shoe", :id "baby-shoe", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
    {:name "Corona Virus", :id "corona-virus", :tags #{"Yarn" "Knit & Crochet" "Accessories"} :detail-pics 0}
-   {:name "Rose", :id "rose", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 0}
+   {:name "Rose", :id "rose", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 2, :folder true}
    {:name "Orchid", :id "orchid", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 1}
    {:name "Lily of Valley", :id "lily-of-valley", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 1}
    {:name "Panda Bamboo Tapestry", :id "panda-bamboo-tapestry", :tags #{"Yarn" "Fiber" "Weave & PomPom" "Room Decor"}, :detail-pics 2}
@@ -67,8 +67,12 @@
    {:name "Winter Coat" :id "winter-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1}
    {:name "Han Black Coat" :id "han-black-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
    {:name "Emperors Yellow Jacket" :id "emperors-yellow-jacket", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
-   {:name "Pink Handbag" :id "pink-handbag", :tags #{"Fabric" "Bags"}, :detail-pics 2}
+   {:name "Kimono" :id "kimono", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder true}
+   {:name "Kimono" :id "kimono", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder true}
+   {:name "Baby Body" :id "baby-body", :tags #{"Fabric" "Garment"}, :detail-pics 0, :folder true}
    {:name "Plant Handbag" :id "plant-handbag", :tags #{"Fabric" "Bags"}, :detail-pics 3}
+   {:name "Phone Bag" :id "phone-bag", :tags #{"Fabric" "Bags"}, :detail-pics 1, :folder true}
+   {:name "Shoulder Bag" :id "shoulder-bag", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
    {:name "Backpack" :id "backpack", :tags #{"Fabric" "Bags"}, :detail-pics 1, :folder true}
    {:name "Cosmetic Bag 1" :id "cosmetic-bag-1", :tags #{"Fabric" "Accessories"}, :detail-pics 3, :folder true}
    {:name "Cosmetic Bag 2" :id "cosmetic-bag-2", :tags #{"Fabric" "Accessories"}, :detail-pics 3, :folder true}
@@ -85,6 +89,8 @@
    {:name "Bunny and Chicken" :id "bunny-and-chicken", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 3}
    {:name "Cactus" :id "cactus", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2}
    {:name "Ruby" :id "ruby", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2}
+   {:name "Yellow Diamond" :id "yellow-diamond", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1, :folder true}
+   {:name "Night Lamp" :id "night-lamp", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 0, :folder true}
    ;; Hardware
    {:name "Egg holder" :id "egg-holder", :tags #{"Hardware"}, :detail-pics 1}
    {:name "Mushroom 1" :id "mushroom1", :tags #{"Hardware"}, :detail-pics 6}
