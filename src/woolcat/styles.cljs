@@ -10,6 +10,8 @@
    :font-size medium-font
    :font-weight "400"})
 
+(def light-font {:font-weight 300})
+
 (defglobal
   defaults
   ;; [:div {:border "dotted 1px #888"}] ;; For debugging layouts
@@ -38,13 +40,15 @@
               :max-width "1200px"
               :margin-left "auto", :margin-right "auto"}]
   [:div.product-table
-   {:display "grid"
-    :grid-template-columns "repeat(5, 200px)"
-    :gap "40px"}]
+   (merge light-font
+          {:display "grid"
+           :grid-template-columns "repeat(5, 200px)"
+           :gap "40px"})]
   [:div.links-table
-   {:display "grid"
-    :grid-template-columns "repeat(5, 200px)"
-    :gap "8px"}]
+   (merge light-font
+          {:display "grid"
+           :grid-template-columns "repeat(5, 200px)"
+           :gap "8px"})]
   [:div.technique-table
    {:display "grid"
     :grid-template-columns "repeat(6, 120px)"
