@@ -103,18 +103,18 @@
    {:name "Yellow Diamond" :id "yellow-diamond", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1, :folder true}
    {:name "Night Lamp" :id "night-lamp", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 0, :folder true}
    ;; Hardware
-   {:name "Egg holder" :id "egg-holder", :tags #{"Hardware"}, :detail-pics 1}
-   {:name "Mushroom 1" :id "mushroom1", :tags #{"Hardware"}, :detail-pics 6}
-   {:name "Mushroom 2" :id "mushroom2", :tags #{"Hardware"}, :detail-pics 2}
-   {:name "Mushroom 3" :id "mushroom3", :tags #{"Hardware"}, :detail-pics 3}
-   {:name "Pool" :id "pool", :tags #{"Hardware"}, :detail-pics 1}
-   {:name "Zen Pumpkin" :id "pumpkins", :tags #{"Hardware"}, :detail-pics 5}
-   {:name "Big Flower Pot" :id "big-flower-pot", :tags #{"Hardware"}, :detail-pics 1}
-   {:name "Eco Pot 0" :id "eco-pot-0", :tags #{"Hardware"}, :detail-pics 2}
-   {:name "Flower Pot" :id "flower-pot", :tags #{"Hardware"}, :detail-pics 2}
-   {:name "Jewellery Box" :id "jewellery-box", :tags #{"Hardware"}, :detail-pics 5}
-   {:name "Oasis Platter" :id "oasis-platter", :tags #{"Hardware"}, :detail-pics 1}
-   {:name "Tray" :id "tray", :tags #{"Hardware"}, :detail-pics 1}
+   {:name "Egg holder" :id "egg-holder", :tags #{"Stone"}, :detail-pics 1}
+   {:name "Mushroom 1" :id "mushroom1", :tags #{"Stone"}, :detail-pics 6}
+   {:name "Mushroom 2" :id "mushroom2", :tags #{"Stone"}, :detail-pics 2}
+   {:name "Mushroom 3" :id "mushroom3", :tags #{"Stone"}, :detail-pics 3}
+   {:name "Pool" :id "pool", :tags #{"Stone"}, :detail-pics 1}
+   {:name "Zen Pumpkin" :id "pumpkins", :tags #{"Stone"}, :detail-pics 5}
+   {:name "Big Flower Pot" :id "big-flower-pot", :tags #{"Stone"}, :detail-pics 1}
+   {:name "Eco Pot 0" :id "eco-pot-0", :tags #{"Stone"}, :detail-pics 2}
+   {:name "Flower Pot" :id "flower-pot", :tags #{"Stone"}, :detail-pics 2}
+   {:name "Jewellery Box" :id "jewellery-box", :tags #{"Stone"}, :detail-pics 5}
+   {:name "Oasis Platter" :id "oasis-platter", :tags #{"Stone"}, :detail-pics 1}
+   {:name "Tray" :id "tray", :tags #{"Stone"}, :detail-pics 1}
    ;; Studio
    {:name "Popeye", :id "popeye", :tags #{"Studio"}, :detail-pics 4, :folder true}
    ])

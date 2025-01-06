@@ -27,8 +27,8 @@
      [:div]
      [:div.justify-end
       [:div.pad "Studio"]
-      [:div.pad.link {:on-click #(accountant/navigate! "/dimension/Hardware")}
-       "Hardware"]]]))
+      [:div.pad.link {:on-click #(accountant/navigate! (str "/items/Stone" ))}
+       "Stone"]]]))
 
 (rf/reg-event-db ::home
   (fn [db _]
