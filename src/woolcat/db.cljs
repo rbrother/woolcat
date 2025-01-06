@@ -38,7 +38,7 @@
    {:name "Milky Way Purse", :id "milkyway-purse", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 2}
    {:name "Neptune Purse", :id "neptune-purse", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 2}
    {:name "Big White", :id "big-white", :tags #{"Fiber" "Felt" "Room Decor"}, :detail-pics 3}
-   {:name "Sofa", :id "sofa", :tags #{"Fiber" "Felt" "Room Decor"}, :detail-pics 3}
+   {:name "Sofa", :id "sofa", :tags #{"Fiber" "Felt" "Room Decor"}, :detail-pics 2}
    {:name "Qing", :id "qing-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 4}
    {:name "Song", :id "song-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 2}
    {:name "Rockstar", :id "rockstar-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 0}
@@ -58,11 +58,9 @@
    {:name "Penguin", :id "penguin", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 4, :folder true}
    {:name "Sheep", :id "sheep", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 15, :folder true}
    {:name "Small Dog", :id "small-dog", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 4, :folder true}
-
    {:name "Baby Blanket", :id "baby-blanket", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 1, :folder true}
    {:name "Knee Warmer", :id "knee-warmer", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 1, :folder true}
    {:name "Sweater", :id "sweater", :tags #{"Yarn" "Knit & Crochet" "Haute Couture"}, :detail-pics 1, :folder true}
-
    {:name "Panda Bamboo Tapestry", :id "panda-bamboo-tapestry", :tags #{"Yarn" "Weave & PomPom" "Room Decor"}, :detail-pics 2}
    {:name "Monkey Tapestry", :id "monkey-tapestry", :tags #{"Yarn" "Weave & PomPom" "Room Decor"}, :detail-pics 4}
    {:name "Autumn Dress" :id "autumn-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2}
@@ -116,7 +114,7 @@
    {:name "Oasis Platter" :id "oasis-platter", :tags #{"Stone"}, :detail-pics 1}
    {:name "Tray" :id "tray", :tags #{"Stone"}, :detail-pics 1}
    ;; Studio
-   {:name "Popeye", :id "popeye", :tags #{"Studio"}, :detail-pics 4, :folder true}
+   {:name "Studio", :id "studio", :tags #{"Studio"}, :detail-pics 16, :folder true}
    ])
 
 (def products (mapv amend-product products-raw))
