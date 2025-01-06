@@ -9,7 +9,7 @@
 
 (defn amend-product [{:keys [id detail-pics folder] :as info}]
   (assoc info :photo (if folder (str img-base "products/" id "/main.jpg")
-                       (str img-base "products/" id ".jpg"))
+                                (str img-base "products/" id ".jpg"))
               :detail-photos (->> (range 1 (inc detail-pics))
                                   (map (fn [index] (str img-base "products/" id "/detail" index ".jpg"))))))
 
@@ -32,7 +32,7 @@
    ])
 
 (def products-raw
-  [{:name "Planet Bag", :id "bag-earth-moon", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 6 }
+  [{:name "Planet Bag", :id "bag-earth-moon", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 6}
    {:name "Planet Bag 2", :id "bag-planet-2", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 3}
    {:name "Pink Bag", :id "bag-pink-purple", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 3}
    {:name "Milky Way Purse", :id "milkyway-purse", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 2}
@@ -45,14 +45,26 @@
    {:name "ZhuGe L", :id "zhuge-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"} :detail-pics 2, :folder true}
    {:name "Female Glove", :id "pink-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
    {:name "Male Glove", :id "gray-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"} :detail-pics 0}
-   {:name "Surgeon Glove", :id "surgeon-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
-   {:name "Baby Shoe", :id "baby-shoe", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
+   {:name "Surgeon Glove", :id "surgeon-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 2, :folder true}
+   {:name "Fingerless Glove", :id "fingerless-glove", :tags #{"Yarn" "Fur" "Knit & Crochet" "Accessories"}, :detail-pics 2, :folder true}
+   {:name "Baby Shoe", :id "baby-shoe", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 4, :folder true}
+   {:name "Sandals", :id "sandals", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 1, :folder true}
    {:name "Corona Virus", :id "corona-virus", :tags #{"Yarn" "Knit & Crochet" "Accessories"} :detail-pics 0}
    {:name "Rose", :id "rose", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 2, :folder true}
    {:name "Orchid", :id "orchid", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 1}
    {:name "Lily of Valley", :id "lily-of-valley", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 1}
-   {:name "Panda Bamboo Tapestry", :id "panda-bamboo-tapestry", :tags #{"Yarn" "Fiber" "Weave & PomPom" "Room Decor"}, :detail-pics 2}
-   {:name "Monkey Tapestry", :id "monkey-tapestry", :tags #{"Yarn" "Fiber" "Weave & PomPom" "Room Decor"}, :detail-pics 4}
+   {:name "Balloon Dog", :id "balloon-dog", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 2, :folder true}
+   {:name "Dinosaur", :id "dinosaur", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 4, :folder true}
+   {:name "Penguin", :id "penguin", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 4, :folder true}
+   {:name "Sheep", :id "sheep", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 15, :folder true}
+   {:name "Small Dog", :id "small-dog", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 4, :folder true}
+
+   {:name "Baby Blanket", :id "baby-blanket", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 1, :folder true}
+   {:name "Knee Warmer", :id "knee-warmer", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 1, :folder true}
+   {:name "Sweater", :id "sweater", :tags #{"Yarn" "Knit & Crochet" "Haute Couture"}, :detail-pics 1, :folder true}
+
+   {:name "Panda Bamboo Tapestry", :id "panda-bamboo-tapestry", :tags #{"Yarn" "Weave & PomPom" "Room Decor"}, :detail-pics 2}
+   {:name "Monkey Tapestry", :id "monkey-tapestry", :tags #{"Yarn" "Weave & PomPom" "Room Decor"}, :detail-pics 4}
    {:name "Autumn Dress" :id "autumn-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2}
    {:name "Bear Coat" :id "bear-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 3}
    {:name "Cheonsam" :id "cheonsam", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2}
@@ -67,17 +79,16 @@
    {:name "Winter Coat" :id "winter-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1}
    {:name "Han Black Coat" :id "han-black-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
    {:name "Emperors Yellow Jacket" :id "emperors-yellow-jacket", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
-   {:name "Kimono" :id "kimono", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder true}
-   {:name "Kimono" :id "kimono", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder true}
+   {:name "Kimono" :id "kimono", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1, :folder true}
    {:name "Baby Body" :id "baby-body", :tags #{"Fabric" "Garment"}, :detail-pics 0, :folder true}
    {:name "Plant Handbag" :id "plant-handbag", :tags #{"Fabric" "Bags"}, :detail-pics 3}
    {:name "Phone Bag" :id "phone-bag", :tags #{"Fabric" "Bags"}, :detail-pics 1, :folder true}
    {:name "Shoulder Bag" :id "shoulder-bag", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
    {:name "Backpack" :id "backpack", :tags #{"Fabric" "Bags"}, :detail-pics 1, :folder true}
-   {:name "Cosmetic Bag 1" :id "cosmetic-bag-1", :tags #{"Fabric" "Accessories"}, :detail-pics 3, :folder true}
-   {:name "Cosmetic Bag 2" :id "cosmetic-bag-2", :tags #{"Fabric" "Accessories"}, :detail-pics 3, :folder true}
+   {:name "Cosmetic Bag 1" :id "cosmetic-bag-1", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
+   {:name "Cosmetic Bag 2" :id "cosmetic-bag-2", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
    {:name "Fox Hat 1" :id "fox-hat-1", :tags #{"Leather & Fur" "Hats"}, :detail-pics 7}
-   {:name "Gray Mink Glove" :id "gray-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 7}
+   {:name "Gray Mink Glove" :id "gray-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 6}
    {:name "White Mink Glove" :id "white-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 4}
    {:name "Orange Mitten" :id "orange-mitten", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 1}
    {:name "Fox Bag Charm" :id "fox-key-charm", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 5}
@@ -105,7 +116,7 @@
    {:name "Oasis Platter" :id "oasis-platter", :tags #{"Hardware"}, :detail-pics 1}
    {:name "Tray" :id "tray", :tags #{"Hardware"}, :detail-pics 1}
    ;; Studio
-   {:name "Popeye", :id "popeye", :tags #{"Studio"}, :detail-pics 4}
+   {:name "Popeye", :id "popeye", :tags #{"Studio"}, :detail-pics 4, :folder true}
    ])
 
 (def products (mapv amend-product products-raw))
