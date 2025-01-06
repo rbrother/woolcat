@@ -1,8 +1,6 @@
 (ns woolcat.items-list
-  (:require [accountant.core :as accountant]
-            [re-frame.core :as rf]
-            [woolcat.filters :as filters]
-            [woolcat.db :refer [products]]))
+  (:require [woolcat.db :refer [products]]
+            [woolcat.filters :as filters]))
 
 (defn view [tag]
   [:<>
@@ -10,8 +8,9 @@
    (into
      [:div.product-table.col-span-2]
      (for [{:keys [name id photo]} (filters/filter-products products tag)]
-       [:div.link {:on-click #(accountant/navigate! (str "/item/" id))}
-        [:div.crop-container
-         [:img.cropped-image {:src photo}]]
-        [:div.margin-top name]]))
+       [:div
+        [:a {:href (str "/item/" id)}
+         [:div.crop-container
+          [:img.cropped-image {:src photo}]]
+         [:div.margin-top name]]]))
    [filters/filters-without-pics]])

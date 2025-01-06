@@ -16,7 +16,7 @@
   defaults
   ;; [:div {:border "dotted 1px #888"}] ;; For debugging layouts
   [:body (assoc default-font :user-select "none" :padding "16px")]
-  [:.main-title {:font-size "25px"}]
+  [:.main-title {:font-size "25px", :font-weight 400}]
   [:div.chinese-name {:font-family "Noto Sans HK", :font-size "20px",
                       :font-weight 500}]
   [:.logo-font {:font-family "fredericka the great" :font-size "90px"}]
@@ -40,27 +40,24 @@
               :max-width "1200px"
               :margin-left "auto", :margin-right "auto"}]
   [:div.product-table
-   (merge light-font
-          {:display "grid"
-           :grid-template-columns "repeat(5, 200px)"
-           :gap "40px"})]
+   {:display "grid"
+    :grid-template-columns "repeat(5, 200px)"
+    :gap "40px"}]
   [:div.links-table
-   (merge light-font
-          {:display "grid"
-           :grid-template-columns "repeat(5, 200px)"
-           :gap "8px"})]
+   {:display "grid"
+    :grid-template-columns "repeat(5, 200px)"
+    :gap "8px"}]
   [:div.technique-table
    {:display "grid"
     :grid-template-columns "repeat(6, 120px)"
     :gap "20px"}]
   [:div.crop-container {:width "200px" :height "200px" :overflow "hidden" :position "relative"}]
   [:img.cropped-image {:width "100%" :height "100%" :object-fit "cover"}]
-  [:img.large-photo {:width "50%" }]
+  [:img.large-photo {:width "50%"}]
   [:div.grid {:display "grid"}]
   [:div.col-span-2 {:grid-column "span 2"}]
   [:div.justify-end {:justify-self "end"}]
   [:div.justify-center {:justify-self "center", :text-align "center"}]
-  [:div.link {:cursor "pointer"}]
   [:a (merge light-font {:color "black", :text-decoration "none"})]
   )
 

@@ -1,7 +1,5 @@
 (ns woolcat.filters
   (:require
-    [medley.core :refer [find-first]]
-    [accountant.core :as accountant]
     [re-frame.core :as rf]
     [woolcat.db :refer [tags]]))
 
@@ -21,17 +19,17 @@
   (into
     [:div.product-table.col-span-2]
     (for [{:keys [name photo]} tags]
-      [:div.link {:on-click #(accountant/navigate! (str "/items/" name))}
-       [:div.crop-container
-        [:img.cropped-image {:src photo}]]
-       [:div.margin-top wiggly-arrow name]])))
+      [:div [:a {:href (str "/items/" name)}
+             [:div.crop-container
+              [:img.cropped-image {:src photo}]]
+             [:div.margin-top wiggly-arrow name]]])))
 
 (defn filters-without-pics []
   (into
     [:div.links-table.col-span-2]
     (for [{:keys [name]} tags]
-      [:div.link {:on-click #(accountant/navigate! (str "/items/" name))}
-       [:div wiggly-arrow name]])))
+      [:div [:a {:href (str "/items/" name)}
+             [:div wiggly-arrow name]]])))
 
 ;; Subs
 

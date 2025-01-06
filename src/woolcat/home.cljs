@@ -1,10 +1,9 @@
 (ns woolcat.home
   (:require
-    [accountant.core :as accountant]
     [re-frame.core :as rf]
     [woolcat.filters :as filters]
-    [woolcat.items-list :as items-list]
-    [woolcat.item-page :as item-page]))
+    [woolcat.item-page :as item-page]
+    [woolcat.items-list :as items-list]))
 
 (defn top-selection []
   [:<>
@@ -15,10 +14,9 @@
   (let [filter @(rf/subscribe [::filters/filter])
         selected-item @(rf/subscribe [::item-page/selected-item])]
     [:div.main
-     [:div.link {:on-click #(accountant/navigate! "/")}
-      [:div.main-title
-       "Chan Ann Chuang " [:span.gray "Atelier"]]
-      [:div.chinese-name "莊誠安"]]
+     [:div [:a {:href "/"}
+            [:div.main-title "Chan Ann Chuang " [:span.gray "Atelier"]]
+            [:div.chinese-name "莊誠安"]]]
      [:div.justify-end "Info"]
      (cond
        selected-item [item-page/view]
@@ -26,8 +24,8 @@
        :else [top-selection])
      [:div]
      [:div.justify-end
-      [:div.pad.link {:on-click #(accountant/navigate! (str "/item/studio" ))} "Studio"]
-      [:div.pad.link {:on-click #(accountant/navigate! (str "/items/Stone" ))} "Stone"]]]))
+      [:div.pad [:a {:href "/item/studio"} "Studio"]]
+      [:div.pad [:a {:href "/items/Stone"} "Stone"]]]]))
 
 (rf/reg-event-db ::home
   (fn [db _]
