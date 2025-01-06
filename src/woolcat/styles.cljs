@@ -61,5 +61,6 @@
   [:div.justify-end {:justify-self "end"}]
   [:div.justify-center {:justify-self "center", :text-align "center"}]
   [:div.link {:cursor "pointer"}]
+  [:a (merge light-font {:color "black", :text-decoration "none"})]
   )
 
