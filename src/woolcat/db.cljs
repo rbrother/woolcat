@@ -92,14 +92,15 @@
    {:name "Fox Bag Charm" :id "fox-key-charm", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 5}
    {:name "Hare Bag" :id "hare-bag", :tags #{"Leather & Fur" "Bags"}, :detail-pics 5}
    {:name "Lamp Cover 1" :id "lamp-cover-1", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1}
-   {:name "Lamp Cover 2" :id "lamp-cover-2", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1}
-   {:name "Organic Lamp Cover" :id "organic-lamp-cover", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1}
-   {:name "Asian Lamp Cover" :id "asian-lamp-cover", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1}
+   {:name "Lamp Cover 2" :id "lamp-cover-2", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 7}
+   {:name "Organic Lamp Cover" :id "organic-lamp-cover", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2}
+   {:name "Asian Lamp Cover" :id "asian-lamp-cover", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 4}
    {:name "Bunny and Chicken" :id "bunny-and-chicken", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 3}
-   {:name "Cactus" :id "cactus", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2}
-   {:name "Ruby" :id "ruby", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2}
-   {:name "Yellow Diamond" :id "yellow-diamond", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 1, :folder true}
-   {:name "Night Lamp" :id "night-lamp", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 0, :folder true}
+   {:name "Cactus" :id "cactus", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 3}
+   {:name "Ruby" :id "ruby", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 4, :folder true}
+   {:name "Yellow Diamond" :id "yellow-diamond", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2, :folder true}
+   {:name "Night Lamp" :id "night-lamp", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 2, :folder true}
+   {:name "Fūrin" :id "furin", :tags #{"Paper" "Origami" "Room Decor"}, :detail-pics 4, :folder true}
    ;; Hardware
    {:name "Egg holder" :id "egg-holder", :tags #{"Stone"}, :detail-pics 1}
    {:name "Mushroom 1" :id "mushroom1", :tags #{"Stone"}, :detail-pics 6}
