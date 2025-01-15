@@ -41,4 +41,4 @@
   (fn [db [_ filter-name]]
     (-> db
         (assoc :filter filter-name)
-        (dissoc :selected-item))))
+        (dissoc :selected-item :page))))

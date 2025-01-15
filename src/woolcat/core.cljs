@@ -9,6 +9,7 @@
     [woolcat.config :as config]
     [woolcat.db :as db]
     [woolcat.styles]
+    [woolcat.info]
     [woolcat.home :as home] ;; Needed for global styles
     ))
 
@@ -25,7 +26,8 @@
     (rdom/render [home/main-panel] root-el)))
 
 (def routes
-  [{:regex #"/item/(.+)", :dispatch [:woolcat.item-page/select-item]}
+  [{:regex #"/info", :dispatch [:woolcat.info/show-info]}
+   {:regex #"/item/(.+)", :dispatch [:woolcat.item-page/select-item]}
    {:regex #"/items/(.+)", :dispatch [:woolcat.filters/select-items]}
    {:regex #".*", :dispatch [::home/home]} ;; Default route, match anything else
    ])
