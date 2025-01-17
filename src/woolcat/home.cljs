@@ -19,7 +19,7 @@
      [:div [:a {:href "/"}
             [:div.main-title "Chan Ann Chuang " [:span.gray "Atelier"]]
             [:div.chinese-name "莊誠安"]]]
-     [:div.justify-end [:a {:href "/info"} "Info"]]
+     [:div.justify-end [:a {:href "/about"} "About"]]
      (cond
        (= page :info) [info/view]
        selected-item [item-page/view]

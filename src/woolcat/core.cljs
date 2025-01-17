@@ -26,7 +26,7 @@
     (rdom/render [home/main-panel] root-el)))
 
 (def routes
-  [{:regex #"/info", :dispatch [:woolcat.info/show-info]}
+  [{:regex #"/about", :dispatch [:woolcat.info/show-info]}
    {:regex #"/item/(.+)", :dispatch [:woolcat.item-page/select-item]}
    {:regex #"/items/(.+)", :dispatch [:woolcat.filters/select-items]}
    {:regex #".*", :dispatch [::home/home]} ;; Default route, match anything else
