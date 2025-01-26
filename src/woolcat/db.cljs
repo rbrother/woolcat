@@ -35,7 +35,7 @@
   [{:name "Planet Bag", :id "bag-earth-moon", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 6}
    {:name "Planet Bag 2", :id "bag-planet-2", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 3}
    {:name "Pink Bag", :id "bag-pink-purple", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 3}
-   {:name "Milky Way Purse", :id "milkyway-purse", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 2}
+   {:name "Milky Way Purse", :id "milkyway-purse", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 3}
    {:name "Neptune Purse", :id "neptune-purse", :tags #{"Fiber" "Felt" "Bags"}, :detail-pics 2}
    {:name "Big White", :id "big-white", :tags #{"Fiber" "Felt" "Room Decor"}, :detail-pics 3}
    {:name "Sofa", :id "sofa", :tags #{"Fiber" "Felt" "Room Decor"}, :detail-pics 2}
@@ -68,10 +68,11 @@
    {:name "Cheonsam" :id "cheonsam", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2}
    {:name "Green Coat" :id "green-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2}
    {:name "Joy Dress" :id "joy-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
-   {:name "Princess Dress" :id "princess-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
-   {:name "Princess Line Dress" :id "princess-line", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 0}
-   {:name "Season Dress" :id "season-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 0}
+   {:name "Princess Dress" :id "princess-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4, :folder true}
+   {:name "Princess Line Dress" :id "princess-line", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder true}
+   {:name "Season Dress" :id "season-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1, :folder true}
    {:name "Spring Coat" :id "spring-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1}
+   {:name "Double Side Dress" :id "double-side-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder true}
    {:name "Trench Coat" :id "trench-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 3}
    {:name "Long Winter Coat" :id "winter-ao", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
    {:name "Winter Coat" :id "winter-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1}
@@ -85,6 +86,8 @@
    {:name "Backpack" :id "backpack", :tags #{"Fabric" "Bags"}, :detail-pics 1, :folder true}
    {:name "Cosmetic Bag 1" :id "cosmetic-bag-1", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
    {:name "Cosmetic Bag 2" :id "cosmetic-bag-2", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
+   {:name "Cosmetic Bag 3" :id "cosmetic-bag-3", :tags #{"Fabric" "Bags"}, :detail-pics 2, :folder true}
+   {:name "Pillow Cover", :id "pillow-cover", :tags #{"Room Decor" "Fabric"}, :detail-pics 2, :folder true}
    {:name "Fox Hat 1" :id "fox-hat-1", :tags #{"Leather & Fur" "Hats"}, :detail-pics 7}
    {:name "Gray Mink Glove" :id "gray-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 6}
    {:name "White Mink Glove" :id "white-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 4}
@@ -116,7 +119,19 @@
    {:name "Tray" :id "tray", :tags #{"Stone"}, :detail-pics 1}
    ;; Studio
    {:name "Studio", :id "studio", :tags #{"Studio"}, :detail-pics 16, :folder true}
-   ])
+   ;; Travel log
+   ;; TODO: ALLOW OPTINONAL REMOVAL MAIN PHOTO FROM LIST
+   {:name "Valencia", :id "valencia", :tags #{"Travel"}, :folder true, :detail-pics 3}
+   {:name "Frank Gehry", :id "frank-gehry", :tags #{"Travel"}, :folder true, :detail-pics 5}
+   {:name "Portugal", :id "portugal", :tags #{"Travel"}, :folder true, :detail-pics 3}
+   {:name "England", :id "england" :tags #{"Travel"}, :folder true, :detail-pics 3}
+   {:name "Stonehenge", :id "stonehenge" :tags #{"Travel"}, :folder true, :detail-pics 2}
+   {:name "Hadid and Big", :id "hadid-and-big" :tags #{"Travel"}, :folder true, :detail-pics 4}
+   {:name "Jean Nouvel", :id "jean-nouvel" :tags #{"Travel"}, :folder true, :detail-pics 4}
+   {:name "Frankfurt", :id "frankfurt" :tags #{"Travel"}, :folder true, :detail-pics 2}
+   {:name "Hamburg", :id "hamburg" :tags #{"Travel"}, :folder true, :detail-pics 2}
+   {:name "Beijing", :id "beijing" :tags #{"Travel"}, :folder true, :detail-pics 3}
+   {:name "Mars", :id "mars" :tags #{"Travel"}, :folder true, :detail-pics 6}])
 
 (def products (mapv amend-product products-raw))
 
