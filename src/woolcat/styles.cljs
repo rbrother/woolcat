@@ -36,7 +36,7 @@
                :background "#f33" :color "black" :font-weight "bold"
                :padding "8px" :align-items "center"}]
   [:div.main {:display "grid", :grid-template-columns "auto auto"
-              :grid-gap "64px"
+              :grid-gap "32px"
               :max-width "1200px"
               :margin-left "auto", :margin-right "auto"}]
   [:div.product-table
@@ -59,5 +59,6 @@
   [:div.justify-end {:justify-self "end"}]
   [:div.justify-center {:justify-self "center", :text-align "center"}]
   [:a (merge light-font {:color "black", :text-decoration "none"})]
+  [:.light-font light-font]
   )
 
