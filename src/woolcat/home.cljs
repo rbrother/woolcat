@@ -21,7 +21,7 @@
             [:div.chinese-name "莊誠安"]]]
      [:div.justify-end
       [:a.pad {:href "/items/Stone"} "Stone"]
-      [:a.pad {:href "/items/Travel"} "Travel Log"]]
+      [:a.pad {:href "/items/Travel%20Log"} "Travel Log"]]
      (cond
        (= page :info) [info/view]
        selected-item [item-page/view]
