@@ -4,8 +4,10 @@
 
 (defn view []
   (let [item-id @(rf/subscribe [::selected-item])
-        {:keys [name tags photo description detail-photos] :as _item} (get db/products-index item-id)
-        all-photos (concat [photo] detail-photos)]
+        {:keys [name tags photo description detail-photos folder] :as _item} (get db/products-index item-id)
+        all-photos (if (= folder :only-details)
+                     detail-photos
+                     (concat [photo] detail-photos))]
     (into [:<>
            [:div.col-span-2
             (into [:div] (interpose ", " (for [tag tags] [:a {:href (str "/items/" tag)} tag])))

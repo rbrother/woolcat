@@ -120,36 +120,35 @@
    ;; Studio
    {:name "Studio", :id "studio", :tags #{"Studio"}, :detail-pics 16, :folder true}
    ;; Travel log
-   ;; TODO: ALLOW OPTINONAL REMOVAL MAIN PHOTO FROM LIST
-   {:name "Valencia", :id "valencia", :tags #{"Travel Log"}, :folder true, :detail-pics 3,
+   {:name "Valencia", :id "valencia", :tags #{"Travel Log"}, :folder :only-details, :detail-pics 3,
     :description [:<> [:div "History is always astonishingly similar, one step forward, is cliff, do you jump?
                   There is no turning back, wolves behind."]
                   [:div "Answer is simple:"]
                   [:div "On horse back, turn; On foot, swim."]]}
-   {:name "Frank Gehry", :id "frank-gehry", :tags #{"Travel Log"}, :folder true, :detail-pics 5
+   {:name "Frank Gehry", :id "frank-gehry", :tags #{"Travel Log"}, :folder :only-details, :detail-pics 5
     :description [:<> [:div "You could have your Disney on,"]
                   [:div "You could wear your Louis Vuitton,"]
                   [:div "But even with nothing on,"]
                   [:div "Yet you made me look, master Frank G."]]}
-   {:name "Portugal", :id "portugal", :tags #{"Travel Log"}, :folder true, :detail-pics 3
+   {:name "Portugal", :id "portugal", :tags #{"Travel Log"}, :folder :only-details, :detail-pics 3
     :description "Skeleton of architecture vs. Natural chamber with windows."}
-   {:name "England", :id "england" :tags #{"Travel Log"}, :folder true, :detail-pics 6  ,
+   {:name "England", :id "england" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 6  ,
     :description [:<> [:div "The Castle Theatre of Corfe"]
                   [:div "Stage One: The Lord of the Ring part III: Return of the King"]
                   [:div "Seat: Sir Hatton & Lady Bankes"]]}
-   {:name "Stonehenge", :id "stonehenge" :tags #{"Travel Log"}, :folder true, :detail-pics 2
+   {:name "Stonehenge", :id "stonehenge" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 2
     :description "Solar angle has not changed in 5000 years, people have changed a lot."}
-   {:name "Hadid or BIG", :id "hadid-and-big" :tags #{"Travel Log"}, :folder true, :detail-pics 4
+   {:name "Hadid or BIG", :id "hadid-and-big" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 4
     :description [:<> [:div "There are 360 degrees, so why stick to one?"]
                   [:div "It all depends on what structure you use and what materials you choose,
                   have you ever seen a tree that is not straight? In history, trunks were bent
                   to be built, but only for “Heaven”, for the place where they can afford the costs."]]}
-   {:name "Jean Nouvel", :id "jean-nouvel" :tags #{"Travel Log"}, :folder true, :detail-pics 4
+   {:name "Jean Nouvel", :id "jean-nouvel" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 4
     :description "Grey roof, White walls, Green Water, Master Nouvel seems to know a lot about ”Gangnam” style.
     The pattern on the roof reveals local islamic culture without a doubt, standing beneath it feels like
     under some futuristic alien spaceship, meanwhile surroundings are full of human history.
     What a masterpiece!"}
-   {:name "Frankfurt", :id "frankfurt" :tags #{"Travel Log"}, :folder true, :detail-pics 2,
+   {:name "Frankfurt", :id "frankfurt" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 2,
     :description [:<> [:div "Finally let’s talk about artificial intelligence. Why are we afraid?
                   Do we need to be afraid? Is it going to take over us? To answer those, we need to travel back in time,
                   back to the time man invented screwdriver for the first time."]
@@ -171,11 +170,11 @@
                   playing screw driver? Is there a ”manual” of this advanced fancy ”screwdriver”? When all
                   these questions are properly answered, there should be no more need to fear of AI,
                   it will be just another handy tool that free us ”cave man”."]]}
-   {:name "Hamburg", :id "hamburg" :tags #{"Travel Log"}, :folder true, :detail-pics 2
+   {:name "Hamburg", :id "hamburg" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 2
     :description "I admire Herzog & Demeuron with my full heart."}
-   {:name "Beijing", :id "beijing" :tags #{"Travel Log"}, :folder true, :detail-pics 5
+   {:name "Beijing", :id "beijing" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 5
     :description "Who does not want a glazed fireplace and marble grave?!"}
-   {:name "Mars", :id "mars" :tags #{"Travel Log"}, :folder true, :detail-pics 6
+   {:name "Mars", :id "mars" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 6
     :description [:<> [:div "Barbie: Shall we begin our work on Mars?"]
                   [:div "Starting from a seed, bring our farm animals, and also, the Flamingo!"]]}])
 
