@@ -2,21 +2,26 @@
   (:require [re-frame.core :as rf]
             [woolcat.db :as db]))
 
+(defn show-tags? [tags]
+  (not= tags #{"Travel Log"}))
+
 (defn view []
   (let [item-id @(rf/subscribe [::selected-item])
         {:keys [name tags photo description detail-photos folder] :as _item} (get db/products-index item-id)
         all-photos (if (= folder :only-details)
                      detail-photos
                      (concat [photo] detail-photos))]
-    (into [:<>
-           [:div.col-span-2
-            (into [:div] (interpose ", " (for [tag tags] [:a {:href (str "/items/" tag)} tag])))
-            [:p.main-title name]
-            [:div.light-font description]
-            ]]
-          (for [photo all-photos]
-            [:div.col-span-2.justify-center
-             [:img.large-photo {:src photo}]]))))
+    [:<>
+     [:div.col-span-2
+      (when (show-tags? tags)
+        (into [:div] (interpose ", " (for [tag tags] [:a {:href (str "/items/" tag)} tag]))))
+      [:p.main-title name]]
+     (into [:<>]
+           (for [photo all-photos]
+             [:div.col-span-2.justify-center
+              [:img.large-photo {:src photo}]]))
+     [:div.col-span-2
+      [:div.light-font description]]]))
 
 ;; Subs
 
