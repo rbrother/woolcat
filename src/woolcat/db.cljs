@@ -41,7 +41,7 @@
    {:name "Sofa", :id "sofa", :tags #{"Fiber" "Felt" "Room Decor"}, :detail-pics 2}
    {:name "Qing", :id "qing-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 4}
    {:name "Song", :id "song-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 2}
-   {:name "Rockstar", :id "rockstar-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 0}
+   {:name "Rockstar", :id "rockstar-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :folder :only-details, :detail-pics 2}
    {:name "ZhuGe L", :id "zhuge-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"} :detail-pics 2, :folder true}
    {:name "Female Glove", :id "pink-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
    {:name "Male Glove", :id "gray-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"} :detail-pics 0}
@@ -69,26 +69,31 @@
    {:name "Green Coat" :id "green-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2}
    {:name "Joy Dress" :id "joy-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
    {:name "Princess Dress" :id "princess-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4, :folder true}
-   {:name "Princess Line Dress" :id "princess-line", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder true}
-   {:name "Season Dress" :id "season-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1, :folder true}
-   {:name "Spring Coat" :id "spring-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1}
-   {:name "Double Side Dress" :id "double-side-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder true}
-   {:name "Trench Coat" :id "trench-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 3}
-   {:name "Long Winter Coat" :id "winter-ao", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
+   {:name "Princess Line Dress" :id "princess-line", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder :only-details}
+   {:name "Season Dress" :id "season-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1, :folder :only-details}
+   {:name "Spring Coat" :id "spring-coat", :tags #{"Fabric" "Haute Couture" "Garment" "Unikko"}, :detail-pics 1}
+   {:name "Japanese Dress" :id "japanese-dress", :tags #{"Fabric" "Haute Couture" "Garment" "Unikko"}, :folder :only-details, :detail-pics 2}
+   {:name "Mother Daughter Dress" :id "mother-daughter-dress", :tags #{"Fabric" "Haute Couture" "Garment" "Unikko"}, :folder true, :detail-pics 2}
+   {:name "Red Dress" :id "red-dress", :tags #{"Fabric" "Haute Couture" "Garment" "Unikko"}, :folder :only-details, :detail-pics 2}
+   {:name "Double Side Dress" :id "double-side-dress", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 2, :folder :only-details}
+   {:name "Trench Coat" :id "trench-coat", :tags #{"Fabric" "Haute Couture" "Garment" "Unikko"}, :detail-pics 3}
+   {:name "Long Winter Coat" :id "winter-ao", :tags #{"Fabric" "Haute Couture" "Garment" "Unikko"}, :detail-pics 4}
    {:name "Winter Coat" :id "winter-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1}
    {:name "Han Black Coat" :id "han-black-coat", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
    {:name "Emperors Yellow Jacket" :id "emperors-yellow-jacket", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 4}
-   {:name "Kimono" :id "kimono", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1, :folder true}
+   {:name "Kimono" :id "kimono", :tags #{"Fabric" "Haute Couture" "Garment"}, :detail-pics 1, :folder :only-details}
    {:name "Baby Body" :id "baby-body", :tags #{"Fabric" "Garment"}, :detail-pics 0, :folder true}
    {:name "Plant Handbag" :id "plant-handbag", :tags #{"Fabric" "Bags"}, :detail-pics 3}
-   {:name "Phone Bag" :id "phone-bag", :tags #{"Fabric" "Bags"}, :detail-pics 1, :folder true}
-   {:name "Shoulder Bag" :id "shoulder-bag", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
+   {:name "Phone Bag" :id "phone-bag", :tags #{"Fabric" "Bags" "Unikko"}, :detail-pics 1, :folder true}
+   {:name "Shoulder Bag" :id "shoulder-bag", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder :only-details}
    {:name "Backpack" :id "backpack", :tags #{"Fabric" "Bags"}, :detail-pics 1, :folder true}
    {:name "Cosmetic Bag 1" :id "cosmetic-bag-1", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
    {:name "Cosmetic Bag 2" :id "cosmetic-bag-2", :tags #{"Fabric" "Bags"}, :detail-pics 3, :folder true}
    {:name "Cosmetic Bag 3" :id "cosmetic-bag-3", :tags #{"Fabric" "Bags"}, :detail-pics 2, :folder true}
-   {:name "Pillow Cover", :id "pillow-cover", :tags #{"Room Decor" "Fabric"}, :detail-pics 2, :folder true}
+   {:name "Pillow Cover", :id "pillow-cover", :tags #{"Room Decor" "Fabric" "Unikko"}, :detail-pics 2, :folder :only-details}
+   {:name "Stone Pillow", :id "stone-pillow", :tags #{"Room Decor" "Fabric" "Unikko"}, :detail-pics 2, :folder :only-details}
    {:name "Fox Hat 1" :id "fox-hat-1", :tags #{"Leather & Fur" "Hats"}, :detail-pics 7}
+   {:name "Small Hat" :id "small-hat", :tags #{"Fabric" "Hats" "Unikko"}, :detail-pics 5, :folder :only-details}
    {:name "Gray Mink Glove" :id "gray-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 6}
    {:name "White Mink Glove" :id "white-mink-glove", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 4}
    {:name "Orange Mitten" :id "orange-mitten", :tags #{"Leather & Fur" "Accessories"}, :detail-pics 1}
@@ -132,7 +137,7 @@
                   [:div "Yet you made me look, master Frank G."]]}
    {:name "Portugal", :id "portugal", :tags #{"Travel Log"}, :folder :only-details, :detail-pics 3
     :description "Skeleton of architecture vs. Natural chamber with windows."}
-   {:name "England", :id "england" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 6  ,
+   {:name "England", :id "england" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 6,
     :description [:<> [:div "The Castle Theatre of Corfe"]
                   [:div "Stage One: The Lord of the Ring part III: Return of the King"]
                   [:div "Seat: Sir Hatton & Lady Bankes"]]}
@@ -147,7 +152,7 @@
     :description "Grey roof, White walls, Green Water, Master Nouvel seems to know a lot about ”Gangnam” style.
     The pattern on the roof reveals local islamic culture without a doubt, standing beneath it feels like
     under some futuristic alien spaceship, meanwhile surroundings are full of human history.
-    What a masterpiece!"}
+    What a masterpiece! More than happy to see Jean Nouvel in ”Middle East”."}
    {:name "Frankfurt", :id "frankfurt" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 2,
     :description [:<> [:div "Finally let’s talk about artificial intelligence. Why are we afraid?
                   Do we need to be afraid? Is it going to take over us? To answer those, we need to travel back in time,
