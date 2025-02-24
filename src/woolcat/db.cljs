@@ -43,8 +43,8 @@
    {:name "Song", :id "song-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :detail-pics 2}
    {:name "Rockstar", :id "rockstar-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"}, :folder :only-details, :detail-pics 2}
    {:name "ZhuGe L", :id "zhuge-hat", :tags #{"Yarn" "Knit & Crochet" "Hats"} :detail-pics 2, :folder true}
-   {:name "Female Glove", :id "pink-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 0}
-   {:name "Male Glove", :id "gray-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"} :detail-pics 0}
+   {:name "Female Glove", :id "pink-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 4, :folder true}
+   {:name "Male Glove", :id "gray-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"} :detail-pics 9, :folder :only-details}
    {:name "Surgeon Glove", :id "surgeon-glove", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 2, :folder true}
    {:name "Fingerless Glove", :id "fingerless-glove", :tags #{"Yarn" "Fur" "Knit & Crochet" "Accessories"}, :detail-pics 2, :folder true}
    {:name "Baby Shoe", :id "baby-shoe", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 4, :folder true}
