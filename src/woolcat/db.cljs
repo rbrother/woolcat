@@ -149,13 +149,16 @@
                   have you ever seen a tree that is not straight? In history, trunks were bent
                   to be built, but only for “Heaven”, for the place where they can afford the costs."]]}
    {:name "Jean Nouvel", :id "jean-nouvel" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 4
-    :description "Grey roof, White walls, Green Water, Master Nouvel seems to know a lot about ”Gangnam” style.
+    :description [:<> [:div "Grey roof, White walls, Green Water, Master Nouvel seems to know a lot about “Gangnam” style.
     The pattern on the roof reveals local islamic culture without a doubt, standing beneath it feels like
     under some futuristic alien spaceship, meanwhile surroundings are full of human history.
-    What a masterpiece! More than happy to see Jean Nouvel in ”Middle East”."}
+    What a masterpiece!"]
+                  [:hr]
+                  [:div "More than happy to see Jean Nouvel in “Middle East”."]]}
    {:name "Frankfurt", :id "frankfurt" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 2,
     :description [:<> [:div "Finally let’s talk about artificial intelligence. Why are we afraid?
-                  Do we need to be afraid? Is it going to take over us? To answer those, we need to travel back in time,
+                  Do we need to be afraid? Is it going to take over us? To answer those,
+                  we need to travel back in time,
                   back to the time man invented screwdriver for the first time."]
                   [:div "Why did man invent screwdriver? Because we wanted to tighten a screw.
                   If we give a screwdriver and a bunch of screws to a monkey, what would happen?
@@ -172,13 +175,13 @@
                   It brings fun, excitement, and occasionally fear for uncertainty. In order to master
                   this tool, we need to keep asking ourself: Why we invent AI? What is its purpose for us?
                   How can we master this tool? Which part of what we are doing now with AI is like monkey
-                  playing screw driver? Is there a ”manual” of this advanced fancy ”screwdriver”? When all
+                  playing screw driver? Is there a “manual” of this advanced fancy “screwdriver” ? When all
                   these questions are properly answered, there should be no more need to fear of AI,
-                  it will be just another handy tool that free us ”cave man”."]]}
+                  it will be just another handy tool that free us “cave man”."]]}
    {:name "Hamburg", :id "hamburg" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 2
-    :description "I admire Herzog & Demeuron with my full heart."}
+    :description "I admire Herzog & de Meuron with my full heart."}
    {:name "Beijing", :id "beijing" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 5
-    :description "Who does not want a glazed fireplace and marble grave?!"}
+    :description "Who does not want a glazed fireplace and marble grave?"}
    {:name "Mars", :id "mars" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 6
     :description [:<> [:div "Barbie: Shall we begin our work on Mars?"]
                   [:div "Starting from a seed, bring our farm animals, and also, the Flamingo!"]]}])
