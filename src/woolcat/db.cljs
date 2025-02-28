@@ -122,6 +122,10 @@
    {:name "Jewellery Box" :id "jewellery-box", :tags #{"Stone"}, :detail-pics 5}
    {:name "Oasis Platter" :id "oasis-platter", :tags #{"Stone"}, :detail-pics 1}
    {:name "Tray" :id "tray", :tags #{"Stone"}, :detail-pics 1}
+   ;; Painting
+   {:name "Acrylic" :id "acrylic" :tags #{"Painting"}, :detail-pics 6, :folder :only-details}
+   {:name "Watercolor" :id "water-color" :tags #{"Painting"}, :detail-pics 5, :folder :only-details}
+   {:name "Sketch" :id "sketch" :tags #{"Painting"}, :detail-pics 12, :folder :only-details}
    ;; Studio
    {:name "Studio", :id "studio", :tags #{"Studio"}, :detail-pics 16, :folder true}
    ;; Travel log
