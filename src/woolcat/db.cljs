@@ -8,10 +8,15 @@
 (def img-base "https://rjb-share.s3.eu-north-1.amazonaws.com/woolcat-media/")
 
 (defn amend-product [{:keys [id detail-pics folder] :as info}]
-  (assoc info :photo (if folder (str img-base "products/" id "/main.jpg")
-                                (str img-base "products/" id ".jpg"))
-              :detail-photos (->> (range 1 (inc detail-pics))
-                                  (map (fn [index] (str img-base "products/" id "/detail" index ".jpg"))))))
+  (assoc info :photo {:file (if folder (str img-base "products/" id "/main.jpg")
+                                       (str img-base "products/" id ".jpg"))}
+              :detail-photos (if (number? detail-pics)
+                               (->> (range 1 (inc detail-pics))
+                                    (map (fn [index]
+                                           {:file (str img-base "products/" id "/detail" index ".jpg")})))
+                               (->> detail-pics
+                                    (map (fn [{:keys [name] :as pic}]
+                                           (assoc pic :file (str img-base "products/" id "/" name))))))))
 
 (def tags
   [{:name "Fiber", :photo (str img-base "fiber.jpg")}
@@ -123,9 +128,28 @@
    {:name "Oasis Platter" :id "oasis-platter", :tags #{"Stone"}, :detail-pics 1}
    {:name "Tray" :id "tray", :tags #{"Stone"}, :detail-pics 1}
    ;; Painting
-   {:name "Acrylic" :id "acrylic" :tags #{"Painting"}, :detail-pics 6, :folder :only-details}
-   {:name "Watercolor" :id "water-color" :tags #{"Painting"}, :detail-pics 5, :folder :only-details}
-   {:name "Sketch" :id "sketch" :tags #{"Painting"}, :detail-pics 12, :folder :only-details}
+   {:name "Acrylic" :id "acrylic" :tags #{"Painting"}, :folder :only-details
+    :detail-pics [{:name "detail1.jpg" :title "Water lily"}
+                  {:name "detail2.jpg" :title "Water lily"}
+                  {:name "detail3.jpg" :title "Lighthouse"}
+                  {:name "detail4.jpg" :title "Aalto tile"}
+                  {:name "detail5.jpg" :title "Aalto tile"}
+                  {:name "detail6.jpg" :title "Grass and mask"}]}
+   {:name "Watercolor" :id "water-color" :tags #{"Painting"}, :detail-pics 5, :folder :only-details
+    :description "Olive glaze"}
+   {:name "Sketch" :id "sketch" :tags #{"Painting"}, :folder :only-details
+    :detail-pics [{:name "woman-in-hat.jpg", :title "Woman in hat"}
+                  {:name "hair-bun.jpg", :title "Hair bun"}
+                  {:name "sleeping-daughter.jpg", :title "Sleeping daughter"}
+                  {:name "korean-girl.jpg", :title "Korean girl"}
+                  {:name "detail5.jpg", :title ""}
+                  {:name "saima.jpg", :title "Saima"}
+                  {:name "detail7.jpg", :title "Woman having lunch"}
+                  {:name "detail8.jpg", :title "Fight for your right"}
+                  {:name "detail9.jpg", :title "Nordic me"}
+                  {:name "detail10.jpg", :title "Le Corb"}
+                  {:name "detail11.jpg", :title "To the moon"}
+                  {:name "detail12.jpg", :title "Female sumo wrestler"}]}
    ;; Studio
    {:name "Studio", :id "studio", :tags #{"Studio"}, :detail-pics 16, :folder true}
    ;; Travel log

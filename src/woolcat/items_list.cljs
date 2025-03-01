@@ -11,6 +11,6 @@
        [:div
         [:a {:href (str "/item/" id)}
          [:div.crop-container
-          [:img.cropped-image {:src photo}]]
+          [:img.cropped-image {:src (:file photo)}]]
          [:div.margin-top name]]]))
    [filters/filters-without-pics]])

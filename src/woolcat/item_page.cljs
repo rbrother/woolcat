@@ -17,9 +17,10 @@
         (into [:div] (interpose ", " (for [tag tags] [:a {:href (str "/items/" tag)} tag]))))
       [:p.main-title name]]
      (into [:<>]
-           (for [photo all-photos]
+           (for [{:keys [file title]} all-photos]
              [:div.col-span-2.justify-center
-              [:img.large-photo {:src photo}]]))
+              [:img.large-photo {:src file}]
+              (when title [:div.light-font title])]))
      [:div.col-span-2
       [:div.light-font description]]]))
 
