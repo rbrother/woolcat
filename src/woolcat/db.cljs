@@ -144,12 +144,12 @@
                   {:name "korean-girl.jpg", :title "Korean girl"}
                   {:name "detail5.jpg", :title ""}
                   {:name "saima.jpg", :title "Saima"}
-                  {:name "detail7.jpg", :title "Woman having lunch"}
-                  {:name "detail8.jpg", :title "Fight for your right"}
-                  {:name "detail9.jpg", :title "Nordic me"}
-                  {:name "detail10.jpg", :title "Le Corb"}
-                  {:name "detail11.jpg", :title "To the moon"}
-                  {:name "detail12.jpg", :title "Female sumo wrestler"}]}
+                  {:name "woman-lunch.jpg", :title "Woman having lunch"}
+                  {:name "fight-for-right.jpg", :title "Fight for your right"}
+                  {:name "nordic-me.jpg", :title "Nordic me"}
+                  {:name "le-corb.jpg", :title "Le Corb"}
+                  {:name "to-the-moon.jpg", :title "To the moon"}
+                  {:name "female-sumo.jpg", :title "Female sumo wrestler"}]}
    ;; Studio
    {:name "Studio", :id "studio", :tags #{"Studio"}, :detail-pics 16, :folder true}
    ;; Travel log
