@@ -150,6 +150,23 @@
                   {:name "le-corb.jpg", :title "Le Corb"}
                   {:name "to-the-moon.jpg", :title "To the moon"}
                   {:name "female-sumo.jpg", :title "Female sumo wrestler"}]}
+   ;; CGI
+   {:name "Kids painting" :id "kids-painting" :tags #{"CGI"}, :folder :only-details
+    :detail-pics [{:name "circus-original.jpg", :title "Circus original"}
+                  {:name "circus-render.jpg", :title "Circus render"}
+                  {:name "dream-original.jpg", :title "Dream original"}
+                  {:name "dream-render.jpg", :title "Dream render"}
+                  {:name "head-original.jpg", :title "Head original"}
+                  {:name "head-render.jpg", :title "Head render"}]}
+   {:name "House rendering" :id "house-rendering" :tags #{"CGI"}, :folder :only-details
+    :detail-pics [{:name "house1a.jpg", :title ""}
+                  {:name "house1b.jpg", :title ""}
+                  {:name "house1c.jpg", :title ""}
+                  {:name "room2a.jpg", :title ""}
+                  {:name "room2b.jpg", :title ""}
+                  {:name "room2c.jpg", :title ""}
+                  {:name "room2d.jpg", :title ""}
+                  {:name "room2e.jpg", :title ""}]}
    ;; Studio
    {:name "Studio", :id "studio", :tags #{"Studio"}, :detail-pics 16, :folder true}
    ;; Travel log
