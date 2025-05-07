@@ -150,6 +150,130 @@
                   {:name "le-corb.jpg", :title "Le Corb"}
                   {:name "to-the-moon.jpg", :title "To the moon"}
                   {:name "female-sumo.jpg", :title "Female sumo wrestler"}]}
+   {:name "Interactive Design" :id "interactive-design" :tags #{"Research"}, :folder :only-details
+    :detail-pics [{:name "1-projector.jpg" :title ""}
+                  {:name "2-image.jpg" :title ""}
+                  {:name "2-image-B.jpg" :title ""}
+                  {:name "3a-projector.jpg" :title
+                   [:div [:div "PROJECTION in a dark room"]
+                    [:div "Video: Wintergatan-Marble Machine"]
+                    [:div "Bluetooth audio: BT Speaker"]
+                    [:div "Thanks to YIT, Ikea Espoo, Flyingtiger Copenhagen London, Apple, Clas Ohlson, Stokke, Youtube."]]}
+                  {:name "3-image.jpg" :title ""}
+                  {:name "4-image.jpg" :title ""}
+                  {:name "5a-projector.jpg" :title
+                   [:div [:div "Second attempt"]
+                    [:div "Audio: Bose"]
+                    [:div "Thanks to YIT, Ikea, Flyingtiger Copenhagen, Verkkokauppa, Apple"]]}
+                  {:name "5-image.jpg" :title ""}
+                  {:name "6-image.jpg" :title ""}
+                  {:name "7-image.jpg" :title "Third attempt. Thanks to Nolla Cabin"}]}
+   {:name "Mini Eco Farm" :id "eco-farm" :tags #{"Research"}, :folder :only-details
+    :detail-pics [{:title "" :name "10-watermelon.jpg"}
+                  {:title "" :name "20-watermelon.jpg"}
+                  {:title "" :name "30-watermelon.jpg"}
+                  {:title "" :name "40-watermelon.jpg"}
+                  {:title "" :name "50-watermelon.jpg"}
+                  {:title "" :name "60-watermelon.jpg"}
+                  {:title "" :name "70-watermelon.jpg"}
+                  {:title "" :name "80-watermelon.jpg"}
+                  {:title "" :name "90-watermelon.jpg"}
+                  {:name "f1-watermelon.jpg"
+                   :title  "Katoパート1, Katoパート2 started rat race around stone, too much male flowers,
+                   Kijiro doesn’t sit fruit, Kenji is dying; after Harasuke was mistakenly detached by human baby,
+                   Saito 斉藤パート1, 斉藤パート2 has only Tarō fruit, Saito Momo/Saito Ai dying, Tarō is the biggest
+                   among all in terms of mass; leaves closes to human territory are burned unnaturally
+                   (”Wherever humans go, a scorched earth”）……" }
+                  {:title "" :name "f2-watermelon.jpg"}
+                  {:title "" :name "f3-watermelon.jpg"}
+                  {:title "" :name "f4-watermelon.jpg"}
+                  {:title "" :name "f5-watermelon.jpg"}
+                  {:title "" :name "f6-watermelon.jpg"}
+                  {:title "" :name "f7-watermelon.jpg"}
+                  {:title "" :name "91-watermelon.jpg"}
+                  {:title "" :name "92-watermelon.jpg"}
+                  {:title "" :name "93-watermelon.jpg"}
+                  {:title "" :name "94-watermelon.jpg"}
+                  {:title "" :name "95-watermelon.jpg"}
+                  { :name "96-watermelon.jpg" :title "ChibaZuka remains pole straight after survive from deadily desease;
+                  ChibaHara still need help to get back into track like usual, more sap substences appeared on both;
+                  tentacles are drained for four levels. \n”Aki” is truely fall legend, with a polar
+                  of magnetic appearance on North..\n\nShojiro \n(Akira) also survived,
+                  Kimura are moved inside." }
+                  {:title "" :name "97-watermelon.jpg"}
+                  {:title "" :name "98-watermelon.jpg"}
+                  {:title "" :name "99-watermelon.jpg"}
+                  {:title "" :name "a1-snail-egg.jpg"}
+                  {:title "" :name "a3-snail-egg.jpg"}
+                  {:title "" :name "a4-snail-egg.jpg"}
+                  { :name "a5-snail-egg.jpg" :title "Harvest “1000 years” egg" }
+                  {:title "" :name "a6-snail-egg.jpg"}
+                  {:name "b-seeds.jpg"
+                   :title "《Seeds like TH》Morocco watermelon(2 & 1gen)/Strawberry/Piel de Sapo melon/Orange/Radish/Grapes" }
+                  {  :name "c-farm.jpg" :title "Roppongi is going to winter sleep soon, had suffered from drought once,
+                  no fruit this year still.\n\n Aka Nasu family’s three children: \n\nFrodo is a shy boy,
+                  but lucky enough to have twin baby brother&sister Billy and Freda,
+                  both healthy and strong;\nWith one side arm broken in accident, Laila grows big and with
+                  beauty of blooms, seems not interested in baby making at young weeks,
+                  though thoughts have changed now and small babies incubating;\n
+                  Suzuki is the most fruitful among three, leaves widely open towards sun, stem straight standing,
+                  has two juicy brothers: Big Itsu and Kin, at the same time several siblings are hatching
+                  by their sides.\n\nFrames are bit stressed out, stems are strong and heavy,
+                  could use extra support, but maybe no need, winter is coming soon…"}
+                  {:title "Forbidden Fruits" :name "d1-tomato.jpg"}
+                  {:title "" :name "d2-tomato.jpg"}
+                  {:title "" :name "d3-tomato.jpg"}
+                  {:title "From farm to table" :name "d4-tomato.jpg"}
+                  {:title "" :name "e1.jpg"}
+                  {:title "" :name "e2.jpg"}
+                  {:title "Artificial sun dried Hoshigaki" :name "e3.jpg"}
+
+                  {:title "Garden windmill" :name "windmill1.jpg"}
+                  {:title "" :name "windmill2.jpg"}
+                  {:title "" :name "windmill3.jpg"}
+                  ]}
+   {:name "Cake Architecture" :id "cake-architecture" :tags #{"Research"}, :folder :only-details
+    :detail-pics [{:name "01.jpg" :title ""}
+                  {:name "02.jpg" :title ""}
+                  {:name "03.jpg" :title ""}
+                  {:name "04.jpg" :title ""}
+                  {:name "05.jpg" :title ""}
+                  {:name "06.jpg" :title ""}
+                  {:name "07.jpg" :title ""}]}
+   {:name "Eskimo House" :id "eskimo-house" :tags #{"Research"}, :folder :only-details
+    :detail-pics [{:name "01.jpg" :title ""}
+                  {:name "02.jpg" :title ""}
+                  {:name "03.jpg" :title ""}
+                  {:name "04.jpg" :title ""}
+                  {:name "05.jpg" :title ""}
+                  {:name "06.jpg" :title ""}
+                  {:name "07.jpg" :title ""}]}
+   {:name "Mushroom and Forest" :id "mushroom-forest" :tags #{"Research"}, :folder :only-details
+    :detail-pics [{:name "01.jpg" :title ""}
+                  {:name "02.jpg" :title ""}
+                  {:name "03.jpg" :title ""}
+                  {:name "04.jpg" :title ""}
+                  {:name "05.jpg" :title ""}
+                  {:name "06.jpg" :title ""}
+                  {:name "07.jpg" :title ""}
+                  {:name "08.jpg" :title ""}
+                  {:name "09.jpg" :title ""}
+                  {:name "10.jpg" :title "Sky lodge"}
+                  {:name "11.jpg" :title ""}]}
+   {:name "Package" :id "package" :tags #{"Research"}, :folder :only-details
+    :detail-pics [{:name "01.jpg" :title ""}
+                  {:name "02.jpg" :title ""}
+                  {:name "03.jpg" :title ""}
+                  {:name "04.jpg" :title ""}
+                  {:name "05.jpg" :title ""}
+                  {:name "06.jpg" :title ""}
+                  {:name "07.jpg" :title ""}
+                  {:name "08.jpg" :title "Single use cat WC"}
+                  {:name "09.jpg" :title ""}
+                  {:name "10.jpg" :title ""}
+                  {:name "11.jpg" :title ""}]}
+   #_{:name "" :id "" :tags #{"Research"}, :folder :only-details
+    :detail-pics [{:name "" :title ""}]}
    ;; CGI
    {:name "Kids painting" :id "kids-painting" :tags #{"CGI"}, :folder :only-details
     :detail-pics [{:name "circus-original.jpg", :title "Circus original"}
