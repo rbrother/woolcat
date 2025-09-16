@@ -41,6 +41,9 @@
     {:nav-handler (fn [path]
                     (print [:nav-handler path])
                     (js/window.scrollTo 0 0)
+                    (js/gtag "event" "page_view"
+                             (clj->js {:page_location js/window.location.href
+                                       :page_path path}))
                     (->> routes
                          (map (fn [{:keys [regex] :as route}]
                                 (assoc route :matches (re-matches regex path))))

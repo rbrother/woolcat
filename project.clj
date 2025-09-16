@@ -3,7 +3,7 @@
   ;; NOTE: This is *dummy* project-file to satisfy IntelliJ IDEA intellisense needs.
   ;; We are now using Shadow-cljs.edn as the primary first-class project file.
 
-  :description "Woolcat"
+  :description "CAC Atelier"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
