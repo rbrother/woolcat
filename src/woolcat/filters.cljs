@@ -18,10 +18,19 @@
 (defn filters-with-pics []
   (into
     [:div.product-table.col-span-2]
-    (for [{:keys [name photo]} tags]
+    (for [{:keys [name photo photo2 name2]} tags]
       [:div [:a {:href (str "/items/" name)}
              [:div.crop-container
-              [:img.cropped-image {:src photo}]]
+              (if photo2
+                ;; If photo2 exists, create a container with both images
+                [:div.hover-image-container
+                 [:img.cropped-image.hover-image-main {:src photo}]
+                 [:img.cropped-image.hover-image-secondary {:src photo2}]
+                 ;; Add text overlay if name2 exists
+                 (when name2
+                   [:div.hover-text-overlay name2])]
+                ;; If no photo2, just show the main image
+                [:img.cropped-image {:src photo}])]
              [:div.margin-top wiggly-arrow name]]])))
 
 (defn filters-without-pics []
@@ -30,7 +39,6 @@
     (for [{:keys [name]} tags]
       [:div [:a {:href (str "/items/" name)}
              [:div wiggly-arrow name]]])))
-
 ;; Subs
 
 (rf/reg-sub ::filter (fn [db] (:filter db)))

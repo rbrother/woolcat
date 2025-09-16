@@ -19,12 +19,14 @@
                                            (assoc pic :file (str img-base "products/" id "/" name))))))))
 
 (def tags
-  [{:name "Fiber", :photo (str img-base "fiber.jpg")}
+  [{:name "Fiber", :photo (str img-base "fiber.jpg"),
+    :photo2 (str img-base "Felt.jpg")
+    :name2 "Felt"}
    {:name "Yarn", :photo (str img-base "yarn.jpg")}
    {:name "Fabric", :photo (str img-base "textile.jpg")}
    {:name "Leather & Fur", :photo (str img-base "skin.jpg")}
    {:name "Paper", :photo (str img-base "paper.jpg")}
-   {:name "Felt", :photo (str img-base "Felt.jpg")}
+   ;;   {:name "Felt", :photo (str img-base "Felt.jpg")}
    {:name "Knit & Crochet", :photo (str img-base "Knit-Crochet.jpg")}
    {:name "Weave & PomPom", :photo (str img-base "Weave-PomPom.jpg")}
    {:name "Haute Couture", :photo (str img-base "Sew.jpg")}
