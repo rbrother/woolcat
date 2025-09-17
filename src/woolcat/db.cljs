@@ -20,22 +20,20 @@
 
 (def tags
   [{:name "Fiber", :photo (str img-base "fiber.jpg"),
-    :photo2 (str img-base "Felt.jpg")
-    :name2 "Felt"}
-   {:name "Yarn", :photo (str img-base "yarn.jpg")}
-   {:name "Fabric", :photo (str img-base "textile.jpg")}
-   {:name "Leather & Fur", :photo (str img-base "skin.jpg")}
-   {:name "Paper", :photo (str img-base "paper.jpg")}
-   ;;   {:name "Felt", :photo (str img-base "Felt.jpg")}
-   {:name "Knit & Crochet", :photo (str img-base "Knit-Crochet.jpg")}
-   {:name "Weave & PomPom", :photo (str img-base "Weave-PomPom.jpg")}
-   {:name "Haute Couture", :photo (str img-base "Sew.jpg")}
-   {:name "Origami", :photo (str img-base "Origami.jpg")}
-   {:name "Hats", :photo (str img-base "Hats.jpg")}
-   {:name "Garment", :photo (str img-base "Clothes.jpg")}
-   {:name "Accessories", :photo (str img-base "Gloves-Shoes.jpg")}
-   {:name "Bags", :photo (str img-base "Bags.jpg")}
-   {:name "Room Decor", :photo (str img-base "Home-Decor.jpg")}
+    :photo2 (str img-base "Felt.jpg"), :name2 "Felt"}
+   {:name "Yarn", :photo (str img-base "yarn.jpg")
+    :name2 "Knit & Crochet", :photo2 (str img-base "Knit-Crochet.jpg")}
+   {:name "Fabric", :photo (str img-base "textile.jpg")
+    :name2 "Couture", :photo2 (str img-base "Sew.jpg")}
+   {:name "Leather & Fur", :photo (str img-base "skin.jpg")
+    :name2 "Sew", :photo2 (str img-base "products/white-mink-glove/detail2.jpg")}
+   {:name "Paper", :photo (str img-base "paper.jpg")
+    :name2 "Origami", :photo2 (str img-base "Origami.jpg")}
+   {:name "Stone", :photo (str img-base "stone.jpg")}
+   {:name "Paint", :photo (str img-base "paint.jpg")}
+   {:name "CGI", :photo (str img-base "cgi.jpg")}
+   {:name "Travel Log", :photo (str img-base "travel-log.jpg")}
+   {:name "Research", :photo (str img-base "research.jpg")}
    ])
 
 (def products-raw
@@ -60,11 +58,11 @@
    {:name "Rose", :id "rose", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 2, :folder true}
    {:name "Orchid", :id "orchid", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 1}
    {:name "Lily of Valley", :id "lily-of-valley", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 1}
-   {:name "Balloon Dog", :id "balloon-dog", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 2, :folder true}
-   {:name "Dinosaur", :id "dinosaur", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 4, :folder true}
-   {:name "Penguin", :id "penguin", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 4, :folder true}
-   {:name "Sheep", :id "sheep", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 15, :folder true}
-   {:name "Small Dog", :id "small-dog", :tags #{"Yarn" "Knit & Crochet" "Room Decor"}, :detail-pics 4, :folder true}
+   {:name "Balloon Dog", :id "balloon-dog", :tags #{"Yarn" "Knit & Crochet" "Room Decor" "Amigurumi"}, :detail-pics 2, :folder true}
+   {:name "Dinosaur", :id "dinosaur", :tags #{"Yarn" "Knit & Crochet" "Room Decor" "Amigurumi"}, :detail-pics 4, :folder true}
+   {:name "Penguin", :id "penguin", :tags #{"Yarn" "Knit & Crochet" "Room Decor" "Amigurumi"}, :detail-pics 4, :folder true}
+   {:name "Sheep", :id "sheep", :tags #{"Yarn" "Knit & Crochet" "Room Decor" "Amigurumi"}, :detail-pics 15, :folder true}
+   {:name "Small Dog", :id "small-dog", :tags #{"Yarn" "Knit & Crochet" "Room Decor" "Amigurumi"}, :detail-pics 4, :folder true}
    {:name "Baby Blanket", :id "baby-blanket", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 1, :folder true}
    {:name "Knee Warmer", :id "knee-warmer", :tags #{"Yarn" "Knit & Crochet" "Accessories"}, :detail-pics 1, :folder true}
    {:name "Sweater", :id "sweater", :tags #{"Yarn" "Knit & Crochet" "Haute Couture"}, :detail-pics 1, :folder true}
@@ -130,16 +128,16 @@
    {:name "Oasis Platter" :id "oasis-platter", :tags #{"Stone"}, :detail-pics 1}
    {:name "Tray" :id "tray", :tags #{"Stone"}, :detail-pics 1}
    ;; Painting
-   {:name "Acrylic" :id "acrylic" :tags #{"Painting"}, :folder :only-details
+   {:name "Acrylic" :id "acrylic" :tags #{"Paint"}, :folder :only-details
     :detail-pics [{:name "detail1.jpg" :title "Water lily"}
                   {:name "detail2.jpg" :title "Water lily"}
                   {:name "detail3.jpg" :title "Lighthouse"}
                   {:name "detail4.jpg" :title "Aalto tile"}
                   {:name "detail5.jpg" :title "Aalto tile"}
                   {:name "detail6.jpg" :title "Grass and mask"}]}
-   {:name "Watercolor" :id "water-color" :tags #{"Painting"}, :detail-pics 5, :folder :only-details
+   {:name "Watercolor" :id "water-color" :tags #{"Paint"}, :detail-pics 5, :folder :only-details
     :description "Olive glaze"}
-   {:name "Sketch" :id "sketch" :tags #{"Painting"}, :folder :only-details
+   {:name "Sketch" :id "sketch" :tags #{"Paint"}, :folder :only-details
     :detail-pics [{:name "woman-in-hat.jpg", :title "Woman in hat"}
                   {:name "hair-bun.jpg", :title "Hair bun"}
                   {:name "sleeping-daughter.jpg", :title "Sleeping daughter"}

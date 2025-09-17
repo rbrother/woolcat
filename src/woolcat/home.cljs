@@ -20,11 +20,8 @@
             [:div.main-title "Chan Ann Chuang " [:span.gray "Atelier"]]
             [:div.chinese-name "莊誠安"]]]
      [:div.justify-end
-      [:a.pad {:href "/items/Stone"} "Stone"]
-      [:a.pad {:href "/items/Painting"} "Paint"]
-      [:a.pad {:href "/items/CGI"} "CGI"]
-      [:a.pad {:href "/items/Travel%20Log"} "Travel Log"]
-      [:a.pad {:href "/items/Research"} "Research"]]
+      [:a.pad {:href "/about"} "About"]
+      [:a.pad {:href "/item/studio"} "Studio"]]
      (cond
        (= page :info) [info/view]
        selected-item [item-page/view]
@@ -32,8 +29,8 @@
        :else [top-selection])
      [:div]
      [:div.justify-end
-      [:a.pad {:href "/about"} "About"]
-      [:a.pad {:href "/item/studio"} "Studio"]]]))
+      [:a.pad {:href "/items/Amigurumi"} "Amigurumi"]
+      [:a.pad {:href "/items/Hats"} "Hats"]]]))
 
 ;; Subs
 
