@@ -351,9 +351,12 @@
     :description "I admire Herzog & de Meuron with my full heart."}
    {:name "Beijing", :id "beijing" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 5
     :description "Who does not want a glazed fireplace and marble grave?"}
-   {:name "Mars", :id "mars" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 6
+   {:name "Mars", :id "mars" :tags #{"Travel Log"}, :folder :only-details, :detail-pics 8
     :description [:<> [:div "Barbie: Shall we begin our work on Mars?"]
-                  [:div "Starting from a seed, bring our farm animals, and also, the Flamingo!"]]}])
+                  [:div "Starting from a seed, bring our farm animals, and also, the Flamingo!"]
+                  [:hr]
+                  [:div "'Life on mars'"]]}
+   ])
 
 (def products (mapv amend-product products-raw))
 
