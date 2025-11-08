@@ -17,7 +17,7 @@
         selected-item @(rf/subscribe [::item-page/selected-item])]
     [:div.main
      [:div [:a {:href "/"}
-            [:div.main-title "Chan Ann Chuang " [:span.gray "Atelier"]]
+            [:div.main-title "Tsu Ann Chuang " [:span.gray "Atelier"]]
             [:div.chinese-name "莊誠安"]]]
      [:div.justify-end
       [:a.pad {:href "/about"} "About"]
