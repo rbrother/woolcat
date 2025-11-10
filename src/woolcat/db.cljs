@@ -127,6 +127,22 @@
    {:name "Jewellery Box" :id "jewellery-box", :tags #{"Stone"}, :detail-pics 5}
    {:name "Oasis Platter" :id "oasis-platter", :tags #{"Stone"}, :detail-pics 1}
    {:name "Tray" :id "tray", :tags #{"Stone"}, :detail-pics 1}
+   ;; AI
+   {:name "AI Lamps" :id "ai-lamps" :tags #{"AI"}, :folder :only-details
+    :detail-pics [{:name "foxes.jpg" :title [:<> [:div "How to design a product with AI:"]
+                                             [:div "Make origami fox"]
+                                             [:div "Make it the way like origami lamp"]
+                                             [:div "Make origami fox lamp"]
+                                             [:div "Make it white"]
+                                             [:div "Done."]]}
+                  {:name "dance-lion.jpg" :title ""}
+                  {:name "dance-dragon.jpg" :title ""}
+                  {:name "tiger.jpg"}
+                  {:name "tiger-lamp.jpg"}
+                  {:name "lion-lamp.jpg"}
+                  {:name "guardian-lion.jpg"}]}
+   {:name "AI Moomin" :id "ai-moomin" :tags #{"AI"}, :folder :only-details, :detail-pics 4}
+
    ;; Painting
    {:name "Acrylic" :id "acrylic" :tags #{"Paint"}, :folder :only-details
     :detail-pics [{:name "detail1.jpg" :title "Water lily"}

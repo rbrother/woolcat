@@ -29,6 +29,7 @@
        :else [top-selection])
      [:div]
      [:div.justify-end
+      [:a.pad {:href "/items/AI"} "AI"]
       [:a.pad {:href "/items/Amigurumi"} "Amigurumi"]
       [:a.pad {:href "/items/Hats"} "Hats"]]]))
 
